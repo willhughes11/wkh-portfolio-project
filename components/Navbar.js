@@ -4,10 +4,10 @@ import nameLogoFull from './media/doubleU.png';
 
 const navigation = [
   { name: 'Home', href: '#', current: true },
-  { name: 'About', href: '#', current: false },
-  { name: 'Skills', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Contact Me', href: '#', current: false },
+  { name: 'About', href: '#about', current: false },
+  { name: 'Skills', href: '#skills', current: false },
+  { name: 'Projects', href: '#projects', current: false },
+  { name: 'Contact Me', href: '#contact', current: false },
 ]
 
 const classNames = (...classes) => {
@@ -16,7 +16,7 @@ const classNames = (...classes) => {
 
 const NavBar = () => {
   return (
-    <Disclosure as='nav' className='bg-gray-800'>
+    <Disclosure as='nav' className='bg-gray-800 w-full fixed top-0 z-50'>
       {({ open }) => (
         <>
           <div className='max-w-7xl mx-auto px-2 sm:px-6 lg:px-8'>
@@ -39,9 +39,9 @@ const NavBar = () => {
                     )}
                   </Disclosure.Button>
                 </div>
-                <div className='flex-1 sm:flex items-center justify-center sm:items-stretch'>
+                <div className='flex-1 items-center justify-center sm:flex sm:items-stretch'>
                   <div className='hidden sm:block sm:ml-6'>
-                    <div className='sm:flex min-h-screen items-center justify-center py-2'>
+                    <div className='sm:flex items-center justify-center py-2'>
                       {navigation.map((item) => (
                         <a
                           key={item.name}
@@ -62,7 +62,7 @@ const NavBar = () => {
           </div>
 
           <Disclosure.Panel className='sm:hidden'>
-            <div className='px-2 pt-2 pb-3 space-y-1 float-right'>
+            <div className='px-2 pt-2 pb-3 space-y-1'>
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}

@@ -1,5 +1,10 @@
-import Head from 'next/head'
-import React, { Component } from 'react'
+import Head from 'next/head';
+import React, { Component } from 'react';
+import About from '../components/About';
+import Introduction from '../components/Introduction';
+import Skills from '../components/Skills';
+import Projects from '../components/Projects';
+import Contact from '../components/Contact';
 
 class Home extends Component {
     render() {
@@ -9,16 +14,12 @@ class Home extends Component {
                     <title>William Hughes - Home</title>
                     <link rel='icon' href='/favicon.ico' />
                 </Head>
-                <main className='main-content'>
-                    <div className='container mx-auto px-4'>
-                        <hgroup className='relative py-8 text-center'>
-                            <h1 className='p-0 m-0 text-8xl font-thin'>William Hughes</h1>
-                            <h2 className='p-0 m-0 text-xl font-medium'>Full-Stack Engineer</h2>
-                        </hgroup>
-                        <div>
-                            
-                        </div>
-                    </div>
+                <main className='w-full min-h-screen'>
+                    <Introduction />
+                    <About />
+                    <Skills />
+                    <Projects />
+                    <Contact />
                 </main>
             </div>
         )
