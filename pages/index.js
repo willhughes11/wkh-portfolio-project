@@ -5,6 +5,7 @@ import Introduction from '../components/Introduction';
 import Skills from '../components/Skills';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
+import Experience from '../components/Experience';
 
 class Home extends Component {
     render() {
@@ -17,6 +18,7 @@ class Home extends Component {
                 <main className='w-full min-h-screen'>
                     <Introduction />
                     <About />
+                    <Experience />
                     <Skills />
                     <Projects />
                     <Contact />

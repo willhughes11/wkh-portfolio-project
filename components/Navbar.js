@@ -5,6 +5,7 @@ import nameLogoFull from './media/doubleU.png';
 const navigation = [
   { name: 'Home', href: '#', current: true },
   { name: 'About', href: '#about', current: false },
+  { name: 'Experience', href: '#experience', current: false },
   { name: 'Skills', href: '#skills', current: false },
   { name: 'Projects', href: '#projects', current: false },
   { name: 'Contact Me', href: '#contact', current: false },

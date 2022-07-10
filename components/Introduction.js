@@ -1,6 +1,6 @@
 const Introduction = () => {
     return (
-        <section id='home' className='introduction-content min-h-screen'>
+        <section id='home'>
             <div className='container mx-auto p-0 min-h-screen flex flex-col justify-center'>
                 <hgroup className='relative py-8 text-center'>
                     <h1 className='p-0 m-0 text-6xl font-thin md:tracking-widest md:text-8xl'>William Hughes</h1>
