@@ -1,7 +1,7 @@
 const About = () => {
     return (
         <section id='about'>
-            <div className='container w-6/12 mx-auto min-h-screen p-0 flex flex-col justify-center'>
+            <div className='container mx-auto min-h-screen p-0 flex flex-col justify-center lg:w-6/12'>
                 <hgroup className='relative py-8 text-center'>
                     <h1 className='p-2 m-2 text-4xl font-thin md:tracking-widest md:text-6xl'>About</h1>
                     <hr />
@@ -21,6 +21,12 @@ const About = () => {
                             complete tasks.
                         </p>
                         <br />
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+                            sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
                     </div>
                 </div>
             </div>

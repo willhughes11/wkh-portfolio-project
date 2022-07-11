@@ -1,19 +1,20 @@
 import { useState } from 'react';
 import { Tab } from '@headlessui/react';
+import Education from './Education';
 
 const classNames = (...classes) => {
     return classes.filter(Boolean).join(' ')
 }
 
 const Experience = () => {
-    let [experience] = useState({
+    const [experience] = useState({
         'Barracuda Networks': [
           {
             id: 1,
             position: 'Software Engineer',
             from: 'July 2022',
             to: 'Present',
-            responsibilities: [],
+            tasks: [],
           },
         ],
         'Flip The Pips LLC': [
@@ -21,16 +22,16 @@ const Experience = () => {
                 id: 2,
                 position: 'Software Engineer (Part-Time)',
                 from: 'July 2020',
-                to: 'Present',
-                responsibilities: ['Managed company technological infrastructure using cloud service provider AWS',
+                to: 'July 2022',
+                tasks: ['Managed company technological infrastructure using cloud service provider AWS',
+                'Defined and prioritized all product features and capabilities',
                 'Built algorithmic trading software to implement the owner/trader\'s trading strategies using a combination of technical indicators, moving averages, sentiment analysis, simple web scraping, and a proprietary trading algorithm',
                 'Responsible for building, updating, and maintaining the data models of all tables in the database',
                 'Created a multi-threaded data management application that handled user data, subscriptions, and services while interacting with external APIs and internal databases',
                 'Built a secure public API for the frontend web app to interact with and perform various CRUD operations',
                 'Designed frontend web app in React that utilizes global state, handles backend logic, interacts with our API, and allows for users to view and manage their account data, services, and subscriptions through a UI',
                 'Built a data pipeline that web scraped news articles, stored the data in a NoSQL database, queried and performed sentiment analysis on the stored data to generate trade signals',
-                'Setup CI/CD pipelines to automate our software delivery process'
-            ],
+                'Setup CI/CD pipelines to automate our software delivery process'],
             },
         ],
         'Priority Technology Holdings': [
@@ -39,7 +40,12 @@ const Experience = () => {
             position: 'API Engineer / Application Solutions Engineer',
             from: 'July 2021',
             to: 'July 2022',
-            responsibilities: [],
+            tasks: ['Resolved payment processing API related tickets, while adhering to SLAs for various clients',
+            'SME for enterprise and legacy payment platform APIs, Vortex EOS, and MX Merchant respectively',
+            'Updated documentation for all for all PRTH products, including API references and API guide videos',
+            'Supported new customer API integrations',
+            'API SDK: Created an API SDK library to support PRTH\'s payment processing API in a language-idiomatic way, to reduce complexity without sacrificing API functionality',
+            'Integration Hours Analysis: Designed a client integration monitoring system, to track integration hours/time spent on tickets for different clients, using a combination of API requests and web scraping for data, storing data in a NoSQL database, and writing queries and functions to return the data in the desired format. This information would then be used to conceptualize, implement, enforce a new business plan to improve our integration process'],
           }
         ],
         'Noble Systems': [
@@ -48,7 +54,17 @@ const Experience = () => {
                 position: 'Support Technician',
                 from: 'July 2020',
                 to: 'May 2021',
-                responsibilities: [],
+                tasks: ['KPI Migration Project: Migrated MSSQL database that stored key performance Indicator data to PostgreSQL',
+                'Adhered to strict SLAs for various clients of differing configurations, products, and practices',
+                'Documented all activities in ticketing system in a clear and concise manner',
+                'Used Linux and Windows Server operating systems to conduct the following duties:'],
+                taskId: 3,
+                subTasks: ['Troubleshooting of Dialogic, Aculab, and Asterisk telephony systems (VOIP & T1s)',
+                'Using Informix, PostgreSQL, and Microsoft SQL Server Database Query Languages',
+                'Using BASH Scripting to parse logs and adjust scripts Configuration and implementation of SSL/TLS Certificates',
+                'Configuration of web-based applications in Windows IIS and Apache webservers',
+                'Troubleshooting software applications within Cloud and Premise environments',
+                'Saving and analyzing network packet captures for UDP/TCP communication']
             },
           ],
           'GE Digital': [
@@ -57,36 +73,42 @@ const Experience = () => {
                 position: 'Lifecycle Operations Specialist (Site Reliability Engineer)',
                 from: 'July 2019',
                 to: 'July 2020',
-                responsibilities: [],
+                tasks: ['Created/Edited 100+ browser automation scripts with XPath query-based actions in Selenium WebDriver',
+                'Managed 30+ Private Minion Servers, which extended our synthetics coverage to 5 geographical locations, that allowed SAAS Based New Relic Synthetics UI, to connect to and interact with GE\'s internal applications',
+                'Developed an Account Search tool in React for the Application Monitoring Team self-service portal to allow customers and other SRE\'s to more easily find the different accounts in New Relic',
+                'Made charts in React to visualize monitoring team metrics such as ticket queue efficiency, average time to close ticket by SRE and cost by business unit',
+                'Modified the Application Monitoring Team\'s Selenium WebDriver base script to improve descriptions common errors, capture and store data related to errors, and added new features to existing functions per customer request',
+                'Wrote Sensu checks, that monitored critical message brokers, visualization applications, time-series databases, monitoring dashboards, web servers, in-memory data structures and data centers used in GE\'s Event Management infrastructure monitoring system','Designed dashboards in Grafana that visualized monitoring data flow, uptime, availability, application health, and asset health'],
             },
             {
                 id: 6,
                 position: 'Data Analyst Intern (Full Stack Web Developer)',
                 from: 'January 2019',
                 to: 'July 2019',
-                responsibilities: [],
+                tasks: ['Upgraded a GE Asset Search Tool by optimizing SQL queries to improve performance and modified the front-end web design to better fit with the GE standard',
+                'Developed 2 search tools and a KPI/SLA Dashboard that provided GE employees with information needed to locate company assets, determine the legal status of devices, measure leasing data, and different hardware ticket metrics that our team was responsible for tracking'],
             },
           ]
       })
     return (
-        <section id='about'>
-            <div className='container w-6/12 mx-auto min-h-screen p-0 flex flex-col justify-center'>
+        <section id='experience'>
+            <div className='container p-0 flex flex-col justify-center min-h-screen w-full lg:w-9/12 lg:mx-auto'>
                 <hgroup className='relative py-8 text-center'>
                     <h1 className='p-2 m-2 text-4xl font-thin md:tracking-widest md:text-6xl'> Experience </h1>
                     <hr />
                 </hgroup>
-                <div className='w-full flex flex-row px-2 py-2 sm:px-0 h-96'>
+                <div className='w-full flex flex-col px-2 py-2 lg:flex-row sm:px-0'>
                     <Tab.Group>
-                      <Tab.List className='flex flex-col rounded-xl p-1 w-fit min-w-max'>
+                      <Tab.List className='w-full break-normal flex rounded-xl p-1 overflow-x-auto lg:w-fit flex-row lg:min-w-max lg:flex-col'>
                         {Object.keys(experience).map((category) => (
                           <Tab
                             key={category}
                             className={({ selected }) =>
                               classNames(
-                                'w-full p-2.5 font-medium text-blue-700 text-left',
+                                'w-full font-medium text-left whitespace-nowrap p-4 md:p-2.5',
                                 selected
                                   ? 'bg-white'
-                                  : 'text-blue-100 hover:bg-white/[0.12] hover:text-white'
+                                  : 'text-gray-500 hover:bg-white/[0.12] hover:text-gray-800'
                               )
                             }
                           >
@@ -99,7 +121,7 @@ const Experience = () => {
                           <Tab.Panel
                             key={idx}
                             className={classNames(
-                              'rounded-xl bg-white p-1',
+                              'rounded-xl bg-white p-1 overflow-auto h-96',
                               'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400'
                             )}
                           >
@@ -109,9 +131,16 @@ const Experience = () => {
                                   <span className='text-xl font-medium leading-5'> {job.position} </span>
                                   <br />
                                   <span className='text-sm font-medium leading-5'> {job.from} - {job.to} </span>
-                                  <ul className='mt-1 text-xs font-normal list-disc text-gray-500'>
-                                    {job.responsibilities.map((responsibility) => (
-                                        <li className='mx-4 my-2'>{responsibility}</li>
+                                  <ul className='mt-1 text-xs font-normal list-disc'>
+                                    {job.tasks.map((task, index) => (
+                                        <li key={`${job.id}-task-${index}`} className='mx-4 my-2'>
+                                            {task}
+                                            {job.subTasks && index === job.taskId ? (<ul className='mt-1 text-xs font-normal list-[circle]'>
+                                                {job.subTasks.map((subResponsibility) => (
+                                                    <li className='mx-4 my-2'>{subResponsibility}</li>
+                                                ))}
+                                            </ul>) : (<div></div>)}
+                                        </li>
                                     ))}
                                   </ul>
                                 </li>
@@ -122,8 +151,10 @@ const Experience = () => {
                       </Tab.Panels>
                     </Tab.Group>
                 </div>
+                <Education />
             </div>
         </section>
+        
     )
 }
 
