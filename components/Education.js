@@ -116,7 +116,7 @@ const Education = () => {
                           <Tab.Panel
                             key={idx}
                             className={classNames(
-                              'rounded-xl bg-white p-1 min-w-full overflow-auto h-40 lg:h-48 xl:h-44',
+                              'rounded-xl bg-white p-1 min-w-full overflow-auto h-40 lg:h-48 xl:h-44 2xl:h-52',
                               'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400'
                             )}
                           >
