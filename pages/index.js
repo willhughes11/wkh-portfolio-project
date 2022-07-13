@@ -12,7 +12,7 @@ class Home extends Component {
         return (
             <div className='home-page'>
                 <Head>
-                    <title>William Hughes - Home</title>
+                    <title>William Hughes</title>
                     <link rel='icon' href='/favicon.ico' />
                 </Head>
                 <main className='w-full min-h-screen'>

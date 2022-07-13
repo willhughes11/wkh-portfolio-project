@@ -65,8 +65,8 @@ const Skills = () => {
                 title: 'PHP',
                 logo: '/logos/php.png'
               },
-          ],
-          'Mobile Development': [
+        ],
+        'Mobile Development': [
             {
               id: 1,
               name: 'swift',
@@ -85,15 +85,93 @@ const Skills = () => {
                 title: 'React Native',
                 logo: '/logos/react.png'
               },
-          ],
-          'Data Science': [
+        ],
+        'Data Science': [
             {
                 id: 1,
                 name: 'python',
                 title: 'Python',
                 logo: '/logos/python.png'
             },
-          ],
+            {
+                id: 2,
+                name: 'numpy',
+                title: 'Numpy',
+                logo: '/logos/numpy.png'
+            },
+            {
+                id: 3,
+                name: 'pandas',
+                title: 'Pandas',
+                logo: '/logos/pandas.png'
+            },
+            {
+                id: 4,
+                name: 'matplotlib',
+                title: 'Matplotlib',
+                logo: '/logos/matplotlib.png'
+            },
+        ],
+        'Browser Automation': [
+            {
+                id: 1,
+                name: 'selenium',
+                title: 'Selenium',
+                logo: '/logos/selenium.png'
+            },     
+            {
+                id: 2,
+                name: 'python',
+                title: 'Python',
+                logo: '/logos/python.png'
+            },
+            {
+                id: 3,
+                name: 'node',
+                title: 'Node.js',
+                logo: '/logos/node.png'
+            },
+        ],
+        'Artificial Intelligence': [  
+            {
+                id: 1,
+                name: 'python',
+                title: 'Python',
+                logo: '/logos/python.png'
+            },
+            {
+                id: 2,
+                name: 'pytorch',
+                title: 'PyTorch',
+                logo: '/logos/pytorch.png'
+            },
+            {
+                id: 3,
+                name: 'tensorflow',
+                title: 'TensorFlow',
+                logo: '/logos/tensorflow.png'
+            },
+        ],
+        'Event Management': [  
+            {
+                id: 1,
+                name: 'sensu',
+                title: 'Sensu',
+                logo: '/logos/sensu.png'
+            },
+            {
+                id: 2,
+                name: 'inlfuxdb',
+                title: 'InfluxDB',
+                logo: '/logos/influxdb.png'
+            },
+            {
+                id: 3,
+                name: 'grafana',
+                title: 'Grafana',
+                logo: '/logos/grafana.png'
+            },
+        ],
       }]
     return (
         <section id='skills'>
@@ -105,17 +183,16 @@ const Skills = () => {
                 <div className='w-full flex flex-col px-2 py-2 lg:flex-row sm:px-0'>
                     <div className='flex flex-wrap items-center justify-center'>
                         {Object.keys(skills).map((skill,index) => (
-                            <div key={`skill-${index}-container`} className='h-80 w-80 p-6 shadow-lg m-4 block'>
+                            <div key={`skill-${index}-container`} className='p-6 shadow-lg m-4 block h-64 w-64 2xl:h-80 2xl:w-80'>
                             <h1 key={`skill-${index}-title`} className='text-center font-medium text-xl my-4'> {skill} </h1>
                             <div key={`skill-${index}-logos`} className='w-full'>
                                 {skills[skill].map((skill) =>  (
-                                    <div className='inline-block m-2 box-border h-max'>
+                                    <div className='inline-block m-3 w-10 2xl:w-16'>
                                         <img 
                                             src={skill.logo} 
                                             alt={`skill-${index}-logo-${skill.id}-${skill.name}`} 
                                             key={`skill-${index}-logo-${skill.id}-${skill.name}`}
                                             id={`skill-${index}-logo-${skill.id}-${skill.name}`}
-                                            width={70}
                                         />
                                     </div>
                                 ))}
