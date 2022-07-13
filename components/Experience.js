@@ -78,7 +78,7 @@ const Experience = () => {
                 'Developed an Account Search tool in React for the Application Monitoring Team self-service portal to allow customers and other SRE\'s to more easily find the different accounts in New Relic',
                 'Made charts in React to visualize monitoring team metrics such as ticket queue efficiency, average time to close ticket by SRE and cost by business unit',
                 'Modified the Application Monitoring Team\'s Selenium WebDriver base script to improve descriptions common errors, capture and store data related to errors, and added new features to existing functions per customer request',
-                'Wrote Sensu checks, that monitored critical message brokers, visualization applications, time-series databases, monitoring dashboards, web servers, in-memory data structures and data centers used in GE\'s Event Management infrastructure monitoring system','Designed dashboards in Grafana that visualized monitoring data flow, uptime, availability, application health, and asset health'],
+                'Wrote Sensu checks, that monitored critical message brokers, visualization applications, time-series databases, monitoring dashboards, web servers, in-memory databases and data centers used in GE\'s Event Management infrastructure monitoring system','Designed dashboards in Grafana that visualized monitoring data flow, uptime, availability, application health, and asset health'],
             },
             {
                 id: 6,
@@ -92,7 +92,7 @@ const Experience = () => {
       })
     return (
         <section id='experience'>
-            <div className='container p-0 flex flex-col justify-center min-h-screen w-full lg:w-9/12 lg:mx-auto'>
+            <div className='container p-0 flex flex-col justify-center min-h-screen w-full mx-2 lg:w-9/12 lg:mx-auto'>
                 <hgroup className='relative py-8 text-center'>
                     <h1 className='p-2 m-2 text-4xl font-thin md:tracking-widest md:text-6xl'> Experience </h1>
                     <hr />
@@ -121,7 +121,7 @@ const Experience = () => {
                           <Tab.Panel
                             key={idx}
                             className={classNames(
-                              'rounded-xl bg-white p-1 overflow-auto h-96',
+                              'rounded-xl bg-white p-1 overflow-auto h-52 md:h-56 lg:h-72 xl:h-[18rem] 2xl:h-[22rem]',
                               'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400'
                             )}
                           >
@@ -136,8 +136,8 @@ const Experience = () => {
                                         <li key={`${job.id}-task-${index}`} className='mx-4 my-2'>
                                             {task}
                                             {job.subTasks && index === job.taskId ? (<ul className='mt-1 text-xs font-normal list-[circle]'>
-                                                {job.subTasks.map((subResponsibility) => (
-                                                    <li className='mx-4 my-2'>{subResponsibility}</li>
+                                                {job.subTasks.map((subResponsibility,index) => (
+                                                    <li key={`${job.id}-subtask-${index}`} className='mx-4 my-2'>{subResponsibility}</li>
                                                 ))}
                                             </ul>) : (<div></div>)}
                                         </li>

@@ -116,7 +116,7 @@ const Education = () => {
                           <Tab.Panel
                             key={idx}
                             className={classNames(
-                              'rounded-xl bg-white p-1 min-w-full overflow-auto h-64',
+                              'rounded-xl bg-white p-1 min-w-full overflow-auto h-40 lg:h-48 xl:h-44',
                               'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400'
                             )}
                           >
@@ -125,7 +125,7 @@ const Education = () => {
                                 <li key={course.id} className='relative p-3'>
                                   <span className='text-xl font-medium leading-5'> {course.name} </span>
                                   <br />
-                                  <span className='text-l font-medium'> {course.degree} </span>
+                                  <span className='text-md'> {course.degree} </span>
                                   <br />
                                   <span className='text-sm font-medium'> {course.from} - {course.to} </span>
                                 </li>

@@ -1,7 +1,7 @@
 const Introduction = () => {
     return (
         <section id='home'>
-            <div className='container mx-auto p-0 min-h-screen flex flex-col justify-center'>
+            <div className='container p-0 min-h-screen flex flex-col justify-center mx-2 md:mx-auto'>
                 <hgroup className='relative py-8 text-center'>
                     <h1 className='p-0 m-0 text-6xl font-thin md:tracking-widest md:text-8xl'>William Hughes</h1>
                     <h2 className='p-0 m-0 text-xl font-medium md:text-2xl'>Developer</h2>
