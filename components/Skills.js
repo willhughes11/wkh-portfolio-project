@@ -50,7 +50,7 @@ const Skills = () => {
                 name: 'java',
                 title: 'Java',
                 logo: '/logos/java.png'
-              },
+            },
             {
               id: 3,
               name: 'csharp',
@@ -63,6 +63,12 @@ const Skills = () => {
               title: 'PHP',
               logo: '/logos/php.png'
             },
+            // {
+            //     id: 6,
+            //     name: 'go',
+            //     title: 'Go',
+            //     logo: '/logos/golang.png'
+            // },
         ],
         'Mobile Development': [
             {
