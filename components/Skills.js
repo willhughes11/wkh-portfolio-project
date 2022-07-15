@@ -203,7 +203,7 @@ const Skills = () => {
                             <h1 key={`skill-${index}-title`} className='text-center font-medium text-xl my-4'> {skill} </h1>
                             <div key={`skill-${index}-logos`} className='flex flex-wrap justify-center'>
                                 {skills[skill].map((skill) =>  (
-                                    <div className='group inline-block my-1 mx-2 text-center w-1/4'>
+                                    <div key={`skill-${index}-img-wrapper-${skill.id}-${skill.name}`} className='group inline-block my-1 mx-2 text-center w-1/4'>
                                         <img 
                                             src={skill.logo} 
                                             alt={`skill-${index}-logo-${skill.id}-${skill.name}`} 
@@ -211,7 +211,7 @@ const Skills = () => {
                                             id={`skill-${index}-logo-${skill.id}-${skill.name}`}
                                             className='mb-4 mx-auto group-hover:scale-150 group-hover:duration-200 w-12 md:w-14 2xl:w-16'
                                         />
-                                        <span className='tracking-tighter invisible group-hover:visible'>{skill.title}</span>
+                                        <span key={`skill-${index}-title-${skill.id}-${skill.name}`} className='tracking-tighter invisible group-hover:visible'>{skill.title}</span>
                                     </div>
                                 ))}
                             </div>
