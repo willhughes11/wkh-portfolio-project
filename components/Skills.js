@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 const Skills = () => {
     const [skills] = [{
         'Front-End Development': [
@@ -46,25 +44,25 @@ const Skills = () => {
                 name: 'node',
                 title: 'Node.js',
                 logo: '/logos/node.png'
-              },
-              {
-                id: 3,
-                name: 'csharp',
-                title: 'C#',
-                logo: '/logos/csharp.png'
-              },
-              {
+            },
+            {
                 id: 4,
                 name: 'java',
                 title: 'Java',
                 logo: '/logos/java.png'
               },
-              {
-                id: 5,
-                name: 'php',
-                title: 'PHP',
-                logo: '/logos/php.png'
-              },
+            {
+              id: 3,
+              name: 'csharp',
+              title: 'C#',
+              logo: '/logos/csharp.png'
+            },
+            {
+              id: 5,
+              name: 'php',
+              title: 'PHP',
+              logo: '/logos/php.png'
+            },
         ],
         'Mobile Development': [
             {
@@ -110,6 +108,18 @@ const Skills = () => {
                 name: 'matplotlib',
                 title: 'Matplotlib',
                 logo: '/logos/matplotlib.png'
+            },
+            {
+                id: 5,
+                name: 'postgres',
+                title: 'PostgreSQL',
+                logo: '/logos/postgres.png'
+            },
+            {
+                id: 6,
+                name: 'mongo',
+                title: 'MongoDB',
+                logo: '/logos/mongo.png'
             },
         ],
         'Browser Automation': [
@@ -183,17 +193,19 @@ const Skills = () => {
                 <div className='w-full flex flex-col px-2 py-2 lg:flex-row sm:px-0'>
                     <div className='flex flex-wrap items-center justify-center'>
                         {Object.keys(skills).map((skill,index) => (
-                            <div key={`skill-${index}-container`} className='p-6 shadow-lg m-4 block h-64 w-64 2xl:h-80 2xl:w-80'>
+                            <div key={`skill-${index}-container`} className='p-6 shadow-lg m-4 block h-80 w-80 2xl:h-[21rem] 2xl:w-[21rem]'>
                             <h1 key={`skill-${index}-title`} className='text-center font-medium text-xl my-4'> {skill} </h1>
-                            <div key={`skill-${index}-logos`} className='w-full'>
+                            <div key={`skill-${index}-logos`} className='flex flex-wrap justify-center'>
                                 {skills[skill].map((skill) =>  (
-                                    <div className='inline-block m-3 w-10 2xl:w-16'>
+                                    <div className='group inline-block my-1 mx-2 text-center w-1/4'>
                                         <img 
                                             src={skill.logo} 
                                             alt={`skill-${index}-logo-${skill.id}-${skill.name}`} 
                                             key={`skill-${index}-logo-${skill.id}-${skill.name}`}
                                             id={`skill-${index}-logo-${skill.id}-${skill.name}`}
+                                            className='mb-4 mx-auto group-hover:scale-150 group-hover:duration-200 w-12 md:w-14 2xl:w-16'
                                         />
+                                        <span className='tracking-tighter invisible group-hover:visible'>{skill.title}</span>
                                     </div>
                                 ))}
                             </div>
