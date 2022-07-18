@@ -209,9 +209,9 @@ const Skills = () => {
                                             alt={`skill-${index}-logo-${skill.id}-${skill.name}`} 
                                             key={`skill-${index}-logo-${skill.id}-${skill.name}`}
                                             id={`skill-${index}-logo-${skill.id}-${skill.name}`}
-                                            className='mb-4 mx-auto group-hover:scale-150 group-hover:duration-200 w-12 md:w-14 2xl:w-16'
+                                            className='mb-4 mx-auto transition ease-in-out group-hover:scale-150 group-hover:duration-300 w-12 md:w-14 2xl:w-16'
                                         />
-                                        <span key={`skill-${index}-title-${skill.id}-${skill.name}`} className='tracking-tighter invisible group-hover:visible'>{skill.title}</span>
+                                        <span key={`skill-${index}-title-${skill.id}-${skill.name}`} className='tracking-tighter transition ease-in-out opacity-0 group-hover:duration-500 group-hover:opacity-100'>{skill.title}</span>
                                     </div>
                                 ))}
                             </div>
