@@ -1,6 +1,6 @@
-const Projects = () => {
+const Projects = (props) => {
     return (
-        <section id='projects'>
+        <section id='projects' ref={props.projectsRef}>
         </section>
     )
 }

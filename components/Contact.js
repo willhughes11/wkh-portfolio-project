@@ -1,6 +1,6 @@
-const Contact = () => {
+const Contact = (props) => {
     return (
-        <section id='contact'>
+        <section id='contact' ref={props.contactRef}>
         </section>
     )
 }

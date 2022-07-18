@@ -6,7 +6,7 @@ const classNames = (...classes) => {
     return classes.filter(Boolean).join(' ')
 }
 
-const Experience = () => {
+const Experience = (props) => {
     const [experience] = useState({
         'Barracuda Networks': [
           {
@@ -91,9 +91,9 @@ const Experience = () => {
           ]
       })
     return (
-        <section id='experience'>
+        <section id='experience' ref={props.experienceRef}>
             <div className='container p-0 flex flex-col justify-center min-h-screen w-full mx-2 lg:w-9/12 lg:mx-auto'>
-                <hgroup className='relative py-8 text-center'>
+                <hgroup className='relative my-8 text-center'>
                     <h1 className='p-2 m-2 text-4xl font-thin md:tracking-widest md:text-6xl'> Experience </h1>
                     <hr />
                 </hgroup>
