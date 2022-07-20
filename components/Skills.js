@@ -190,9 +190,9 @@ const Skills = (props) => {
         ],
       }]
     return (
-        <section id='skills' ref={props.skillsRef}>
+        <section id='skills' ref={props.skillsRef} className='scroll-m-16'>
             <div className='container p-0 flex flex-col justify-center min-h-screen w-full lg:w-9/12 lg:mx-auto'>
-                <hgroup className='relative py-8 text-center' >
+                <hgroup className='relative py-8 text-center'>
                     <h1 className='p-2 m-2 text-4xl font-thin md:tracking-widest md:text-6xl'> Skills </h1>
                     <hr />
                 </hgroup>

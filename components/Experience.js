@@ -91,7 +91,7 @@ const Experience = (props) => {
           ]
       })
     return (
-        <section id='experience' ref={props.experienceRef}>
+        <section id='experience' className='scroll-m-16' ref={props.experienceRef}>
             <div className='container p-0 flex flex-col justify-center min-h-screen w-full mx-2 lg:w-9/12 lg:mx-auto'>
                 <hgroup className='relative my-8 text-center'>
                     <h1 className='p-2 m-2 text-4xl font-thin md:tracking-widest md:text-6xl'> Experience </h1>

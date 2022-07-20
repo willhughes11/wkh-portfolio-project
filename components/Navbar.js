@@ -33,7 +33,7 @@ const NavBar = (props) => {
     setNavigation(newNav);
     };
 
-    const executeScroll = (ref) => ref.current.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'start'})
+    const executeScroll = (ref) => ref.current.scrollIntoView({behavior: 'smooth'})
 
     const navigateOnClick = (item) => {
         updateCurrentNavItem(item)
@@ -70,6 +70,7 @@ const NavBar = (props) => {
                         {navigation.map((item) => (
                           <a
                             key={item.name}
+                            style={{cursor: 'pointer'}}
                             className={classNames(
                               item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                               'px-3 py-2 rounded-md text-sm font-medium m-2'

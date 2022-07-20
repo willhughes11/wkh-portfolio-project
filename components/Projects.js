@@ -1,6 +1,6 @@
 const Projects = (props) => {
     return (
-        <section id='projects' ref={props.projectsRef}>
+        <section id='projects' className='scroll-m-16' ref={props.projectsRef}>
         </section>
     )
 }

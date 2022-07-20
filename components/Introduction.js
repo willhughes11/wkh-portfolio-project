@@ -1,6 +1,6 @@
 const Introduction = (props) => {
     return (
-        <section id='home' ref={props.homeRef}>
+        <section id='home' className='scroll-m-16' ref={props.homeRef}>
             <div className='container p-0 min-h-screen flex flex-col justify-center mx-2 md:mx-auto'>
                 <hgroup className='relative py-8 text-center'>
                     <h1 className='p-0 m-0 text-6xl font-thin md:tracking-widest md:text-8xl'>William Hughes</h1>
