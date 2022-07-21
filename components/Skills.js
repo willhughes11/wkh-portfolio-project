@@ -26,6 +26,12 @@ const Skills = (props) => {
             logo: '/logos/react.png'
           },
           {
+            id: 6,
+            name: 'next',
+            title: 'Next.js',
+            logo: '/logos/nextjs.png'
+          },
+          {
             id: 5,
             name: 'angular',
             title: 'Angular',
@@ -199,7 +205,7 @@ const Skills = (props) => {
                 <div className='w-full flex flex-col px-2 py-2 lg:flex-row sm:px-0'>
                     <div className='flex flex-wrap items-center justify-center'>
                         {Object.keys(skills).map((skill,index) => (
-                            <div key={`skill-${index}-container`} className='p-6 shadow-lg m-4 block h-80 w-80 2xl:h-[21rem] 2xl:w-[21rem]'>
+                            <div key={`skill-${index}-container`} className='bg-white p-6 shadow-lg m-4 block h-80 w-80 2xl:h-[21rem] 2xl:w-[21rem]'>
                             <h1 key={`skill-${index}-title`} className='text-center font-medium text-xl my-4'> {skill} </h1>
                             <div key={`skill-${index}-logos`} className='flex flex-wrap justify-center'>
                                 {skills[skill].map((skill) =>  (
