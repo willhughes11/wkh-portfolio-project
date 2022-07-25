@@ -91,13 +91,13 @@ const Experience = (props) => {
           ]
       })
     return (
-        <section id='experience' className='scroll-m-16' ref={props.experienceRef}>
+        <section id='experience' className='scroll-m-10' ref={props.experienceRef}>
             <div className='container p-0 flex flex-col justify-center min-h-screen w-full mx-2 lg:w-9/12 lg:mx-auto'>
                 <hgroup className='relative my-8 text-center'>
                     <h1 className='p-2 m-2 text-4xl font-thin md:tracking-widest md:text-6xl'> Experience </h1>
                     <hr />
                 </hgroup>
-                <div className='bg-white w-full flex flex-col px-2 py-2 lg:flex-row sm:px-0'>
+                <div className='bg-white w-full flex flex-col px-2 py-2 lg:flex-row lg:shadow-lg sm:px-0'>
                     <Tab.Group>
                       <Tab.List className='w-full break-normal flex rounded-xl p-1 overflow-x-auto lg:w-fit flex-row lg:min-w-max lg:flex-col'>
                         {Object.keys(experience).map((category) => (

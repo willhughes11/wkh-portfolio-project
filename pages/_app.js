@@ -1,7 +1,11 @@
 import { useRef } from 'react'
-import Layout from '../components/Layout'
+import Layout1 from '../components/layouts/Layout1'
+import Layout2 from '../components/layouts/Layout2'
 import '../styles/globals.css'
-
+const layouts = {
+    L1: Layout1,
+    L2: Layout2,
+  };
 
 function App({ Component, pageProps }) {
     const myRefs = {
@@ -12,11 +16,12 @@ function App({ Component, pageProps }) {
         projects: useRef('projects'),
         contact: useRef('contact-us')
     }
+    const Layout = layouts[Component.layout] || ((children) => <>{children}</>);
     return (
-        <Layout myRefs={myRefs}>
-            <Component {...pageProps} myRefs={myRefs}/>
-        </Layout>
-    )
+      <Layout myRefs={myRefs}>
+        <Component {...pageProps} myRefs={myRefs}/>
+      </Layout>
+    );
 }
 
 export default App

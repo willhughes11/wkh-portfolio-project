@@ -69,12 +69,12 @@ const Skills = (props) => {
               title: 'PHP',
               logo: '/logos/php.png'
             },
-            // {
-            //     id: 6,
-            //     name: 'go',
-            //     title: 'Go',
-            //     logo: '/logos/golang.png'
-            // },
+            {
+                id: 6,
+                name: 'go',
+                title: 'Go',
+                logo: '/logos/golang.png'
+            },
         ],
         'Mobile Development': [
             {
@@ -196,7 +196,7 @@ const Skills = (props) => {
         ],
       }]
     return (
-        <section id='skills' ref={props.skillsRef} className='scroll-m-16'>
+        <section id='skills' ref={props.skillsRef} className='scroll-m-10'>
             <div className='container p-0 flex flex-col justify-center min-h-screen w-full lg:w-9/12 lg:mx-auto'>
                 <hgroup className='relative py-8 text-center'>
                     <h1 className='p-2 m-2 text-4xl font-thin md:tracking-widest md:text-6xl'> Skills </h1>
@@ -205,7 +205,7 @@ const Skills = (props) => {
                 <div className='w-full flex flex-col px-2 py-2 lg:flex-row sm:px-0'>
                     <div className='flex flex-wrap items-center justify-center'>
                         {Object.keys(skills).map((skill,index) => (
-                            <div key={`skill-${index}-container`} className='bg-white p-6 shadow-lg m-4 block h-80 w-80 2xl:h-[21rem] 2xl:w-[21rem]'>
+                            <div key={`skill-${index}-container`} className='bg-white p-6 shadow-lg m-3 block h-80 w-80 2xl:h-[21rem] 2xl:w-[21rem]'>
                             <h1 key={`skill-${index}-title`} className='text-center font-medium text-xl my-4'> {skill} </h1>
                             <div key={`skill-${index}-logos`} className='flex flex-wrap justify-center'>
                                 {skills[skill].map((skill) =>  (

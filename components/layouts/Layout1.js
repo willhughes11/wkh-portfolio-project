@@ -1,7 +1,7 @@
-import Footer from './Footer'
-import NavBar from './Navbar'
+import Footer from '../Footer'
+import NavBar from '../Navbar'
 
-const Layout = ({ children }) => {
+const Layout1 = ({ children }) => {
     return (
         <div className='content w-full scroll-smooth'>
             <NavBar refs={children.props}/>
@@ -11,4 +11,4 @@ const Layout = ({ children }) => {
     )
 }
 
-export default Layout
+export default Layout1
