@@ -7,7 +7,7 @@ const layouts = {
     L2: Layout2,
   };
 
-function App({ Component, pageProps }) {
+const App = ({ Component, pageProps }) => {
     const myRefs = {
         home: useRef('home'),
         about: useRef('about'),
@@ -16,7 +16,7 @@ function App({ Component, pageProps }) {
         projects: useRef('projects'),
         contact: useRef('contact-us')
     }
-    const Layout = layouts[Component.layout] || ((children) => <>{children}</>);
+    const Layout = layouts[Component.layout] || ((children) => <>{console.log(children)}</>);
     return (
       <Layout myRefs={myRefs}>
         <Component {...pageProps} myRefs={myRefs}/>

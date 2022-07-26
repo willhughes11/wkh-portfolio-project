@@ -56,12 +56,7 @@ class Home extends Component {
     }
 }
 
-export const getServerSideProps = async ({ req,res }) => {
-    res.setHeader(
-        'Cache-Control',
-        'public, s-maxage=10, stale-while-revalidate=59'
-    )
-
+export const getStaticProps = async () => {
     const httpLink = createHttpLink({
         uri: 'https://api.github.com/graphql',
       });
