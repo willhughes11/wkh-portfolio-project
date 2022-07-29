@@ -79,6 +79,12 @@ export const getStaticProps = async () => {
         query: gql`
         {
             user(login: "willhughes11") {
+              repository(name: "wkh-portfolio-project") {
+                id
+                forkCount
+                stargazerCount
+                url
+              }
               pinnedItems(first: 6) {
                 totalCount
                 edges {
@@ -117,15 +123,18 @@ export const getStaticProps = async () => {
                 }
               }
             }
-        }
+          }
         `
     })
 
     const { user } = data
     const pinnedItems = user.pinnedItems.edges.map(({ node }) => node)
+    const repository = user.repository
+
     return {
         props: {
-            pinnedItems
+            pinnedItems,
+            repository
         }
     }
 }

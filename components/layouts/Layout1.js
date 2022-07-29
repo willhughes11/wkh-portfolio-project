@@ -6,7 +6,7 @@ const Layout1 = ({ children }) => {
         <div className='content w-full scroll-smooth'>
             <NavBar refs={children.props}/>
             { children }
-            <Footer />
+            <Footer repository={children.props.repository}/>
         </div>
     )
 }
