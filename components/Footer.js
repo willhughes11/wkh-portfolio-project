@@ -1,8 +1,4 @@
 import { Disclosure } from '@headlessui/react';
-import { MenuIcon, XIcon } from '@heroicons/react/outline';
-import github from './media/github.png';
-import linkedIn from './media/linkedin.png';
-import gunIo from './media/gun.io.png';
 
 const Footer = () => {
     return (
@@ -15,13 +11,13 @@ const Footer = () => {
                         </div>
                         <div className='items-center flex justify-center sm:justify-between'>
                             <a href='https://www.linkedin.com/in/williamhughes11/' target={'_blank'}>
-                                <img width={30} src={linkedIn.src} alt='LinkedIn Account' />
+                                <img width={30} src='./media/linkedin.png' alt='LinkedIn Account' />
                             </a>
                             <a href='https://github.com/willhughes11' target={'_blank'} className='px-3'>
-                                <img width={35} src={github.src} alt='GitHub Account'/>
+                                <img width={35} src='./media/github.png' alt='GitHub Account'/>
                             </a>
                             <a href='https://app.gun.io/app/freelancer/c6944b50-0dfe-4147-b0c0-e3e6269bcd41/' target={'_blank'}>
-                                <img width={40} src={gunIo.src} alt='Gun.io Freelancer Account'/>
+                                <img width={40} src='./media/gun.io.png' alt='Gun.io Freelancer Account'/>
                             </a>
                         </div>
                     </div>

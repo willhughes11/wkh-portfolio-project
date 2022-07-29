@@ -1,7 +1,6 @@
 import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { useState } from 'react';
-import nameLogoFull from './media/doubleU.png';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -60,7 +59,7 @@ const NavBar = (props) => {
                     <Link href='/'>
                         <img
                             className='block cursor-pointer'
-                            src={nameLogoFull.src}
+                            src='./media/doubleU.png'
                             alt='Workflow'
                         />
                     </Link>
