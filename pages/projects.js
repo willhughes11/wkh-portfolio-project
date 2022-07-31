@@ -134,6 +134,10 @@ const formatText = (string) => {
                 arr[index] = 'PostgreSQL'
         } else if (element === 'db') {
             arr[index] = 'DB'
+        } else if (element === 'Wkh' || element === 'wkh') {
+            arr[index] = 'WKH'
+        }else if (element === 'Nlp' || element === 'nlp') {
+            arr[index] = 'NLP'
         } else {
             arr[index] = capitalizeFirstLetter(element)
         }
