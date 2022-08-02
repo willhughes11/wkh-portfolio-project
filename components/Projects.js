@@ -101,7 +101,7 @@ const Projects = (props) => {
                         <div className='flex justify-center'>
                             <Link href='/projects'>
                                 <button className='border-gray-800 text-gray-800 border-4 p-3 rounded-lg m-4 transition ease-in-out hover:bg-gray-800 hover:border-transparent hover:text-white'> 
-                                    <a> Other Repos </a>
+                                    <a> Other Projects </a>
                                 </button>
                             </Link>
                         </div>

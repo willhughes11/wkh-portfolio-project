@@ -131,7 +131,7 @@ const formatText = (string) => {
         } else if (element === 'Ios'){
             arr[index] = 'iOS'
         } else if (element === 'Postgresql'){
-                arr[index] = 'PostgreSQL'
+            arr[index] = 'PostgreSQL'
         } else if (element === 'db') {
             arr[index] = 'DB'
         } else if (element === 'Wkh' || element === 'wkh') {

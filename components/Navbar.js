@@ -55,7 +55,7 @@ const NavBar = (props) => {
           <>
             <div className='max-w-7xl mx-auto px-2 sm:px-6 lg:px-8'>
               <div className='relative sm:flex sm:items-center sm:justify-between h-20 p-4 justify-center'>
-                  <div className='relative items-center float-left w-16 sm:float-left sm:absolute'>
+                  <div className='relative items-center float-left w-16 sm:float-left sm:absolute' onClick={() => navigateOnClick(initialNavigation[0])}>
                     <Link href='/'>
                         <img
                             className='block cursor-pointer'
