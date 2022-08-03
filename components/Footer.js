@@ -15,16 +15,16 @@ const Footer = (props) => {
     }
 
     return (
-        <Disclosure as='footer' className='bg-gray-800'>
-            <div className='max-w-7xl mx-auto px-2 sm:px-6 lg:px-8'>
+        <Disclosure as='footer' className='bg-gray-800 w-full'>
+            <div className='w-full mx-auto px-2 sm:px-6 lg:px-8 lg:max-w-7xl'>
                 <div className='relative sm:flex sm:items-center sm:justify-between min-h-16 p-4 justify-center'>
                     <div className='flex-1 justify-between sm:flex sm:items-center'>
-                        <div className='text-white flex flex-nowrap justify-center max-w-[12rem]'>
+                        <div className='py-2 text-white flex flex-nowrap justify-center md:max-w-[12rem]'>
                             <span> © William K Hughes 2022. All rights reserved. </span>
                         </div>
-                        <div className='text-white hover:text-slate-500 cursor-pointer'>
+                        <div className='py-2 text-white hover:text-slate-500 cursor-pointer'>
                         <a href='https://github.com/willhughes11/wkh-portfolio-project' target={'_blank'}>
-                            <div>
+                            <div className='text-center'>
                                 <span>Created by William K Hughes</span>
                             </div>
                             <div className='flex justify-center'>

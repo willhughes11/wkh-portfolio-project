@@ -12,33 +12,50 @@ const Projects = (props) => {
                 </hgroup>
                 <div className='w-full flex flex-col px-2 py-2 sm:px-0'>
 
-                    <div className='flex items-center justify-center'>
-                        <div className='float-left m-2 w-4/12 md:w-1/2 2xl:w-1/4'>
+                    <div className='items-center lg:flex lg:justify-center'>
+                        <div className='m-2 w-full lg:float-left lg:w-1/2 xl:w-4/12 2xl:w-1/4'>
                             <hgroup className='relative py-8'>
                                 <h1 className='text-lg font-thin tracking-tightest md:text-xl'> Featured Project </h1>
                                 <h1 className='text-xl tracking-tightest cursor-pointer hover:underline md:text-2xl'> 
                                     <a href='https://app.beta.flipthepips.com/'> Flip The Pips App </a>
                                 </h1>
                             </hgroup>
-                            <div className='bg-white p-6 shadow-lg block'>
-                                Flip the Pips LLC is a social trading and forex investment company that focuses on
-                                providing financial consultancy and trade copying services. This web app allows
-                                users to sign up, pay for services, monitor account performance, and update their 
-                                account and subscription settings. I assumed the responsibilities of a Full Stack Developer, 
-                                Data Engineer, and Cloud Engineer.
+                            <div>
+                                <div className='bg-transparent lg:bg-white p-4 lg:p-6 shadow-lg absolute lg:relative h-96 lg:h-fit text-sm xl:text-base'>
+                                    <div>
+                                        <p>
+                                            Flip the Pips LLC is a social trading and forex investment company that focuses on
+                                            providing financial consultancy and trade copying services. This web app allows
+                                            users to sign up, pay for services, monitor account performance, and update their 
+                                            account and subscription settings. I assumed the responsibilities of a Full Stack Developer, 
+                                            Data Engineer, and Cloud Engineer.
+                                        </p>
+                                    </div>
+                                    <div className='space-x-2 my-2 flex flex-wrap w-full lg:hidden'>
+                                        {ProjectOneTech.map((value,index) => (
+                                            <span key={`tech-${index}`} className='font-thin tracking-tighter'>{value}</span>
+                                        ))}
+                                    </div>
+                                </div>
+                                <div className='shadow-lg opacity-5 overflow-hidden items-center block lg:hidden'>
+                                    <img
+                                        src='./screenshots/flipThePipsAppSC.png'
+                                        className='h-96 min-w-[48rem] overflow-hidden'
+                                    />
+                                </div>
                             </div>
                         </div>
 
-                        <div className='float-right m-2 w-8/12 md:w-1/2 2xl:w-1/2'>
+                        <div className='float-right m-2 w-8/12 md:w-1/2 2xl:w-1/2 hidden lg:block'>
                             <div className='shadow-lg block'>
                                 <img
                                     src='./screenshots/flipThePipsAppSC.png'
                                     className='w-full h-full'
                                 />
                             </div>
-                            <div className='m-2'>
+                            <div className='m-2 hidden lg:block'>
                                 {ProjectOneTech.map((value,index) => (
-                                    <span key={`tech-${index}`} className='px-2 font-thin tracking-tighter 2xl:text-lg'>{value}</span>
+                                    <span key={`tech-${index}`} className='px-1 text-sm font-thin tracking-tighter xl:px-2 2xl:text-lg'>{value}</span>
                                 ))}
                             </div>
                         </div>

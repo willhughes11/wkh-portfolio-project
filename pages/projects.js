@@ -23,41 +23,43 @@ class ProjectsPage extends Component {
                     <hgroup className='relative py-8 text-center'>
                         <h1 className='p-2 m-2 text-gray-400 text-4xl md:text-6xl'> Projects </h1>
                     </hgroup>
-                    <table className='w-full text-sm text-left text-gray-500 dark:text-gray-400'>
-                        <thead className='text-sm text-gray-700 uppercase dark:bg-gray-700 dark:text-gray-400'>
-                            <tr className='p-4'>
-                                <th className='py-3 px-6'>Created</th>
-                                <th className='py-3 px-6'>Title</th>
-                                <th className='py-3 px-6'>Languages</th>
-                                <th className='py-3 px-6'>Link</th>
-                            </tr>
-                        </thead>
-                        <tbody className='text-sm font-semibold'>
-                            {this.props.repositories.map((repo,index) => (
-                                <tr key={`tr-${index}`} className='dark:bg-gray-800'>
-                                    <td className='py-4 px-6'>
-                                        {moment(repo.createdAt).format('MM/DD/YYYY')}
-                                    </td>
-                                    <td className='py-4 px-6'>
-                                        {formatText(repo.name)}
-                                    </td>
-                                    <td className='space-x-3 py-4 px-6'>
-                                        {repo.languages.edges.map((topic,index) => (
-                                            <span key={topic.node.name} className='text-sm'>{topic.node.name}</span>
-                                        ))}
-                                    </td>
-                                    <td className='py-4 px-6'>
-                                        <a href={repo.projectsUrl}>
-                                            <svg xmlns='http://www.w3.org/2000/svg' className='h-5 w-5 cursor-pointer' viewBox='0 0 20 20' fill='currentColor'>
-                                              <path d='M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z' />
-                                              <path d='M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z' />
-                                            </svg>
-                                        </a>
-                                    </td>
-                               </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                    <div className='overflow-auto'>
+                        <table className='table-auto overflow-scroll w-full text-sm text-left text-gray-500 dark:text-gray-400'>
+                            <thead className='text-sm text-gray-700 uppercase dark:bg-gray-700 dark:text-gray-400'>
+                                <tr className='p-4'>
+                                    <th className='py-3 px-6'>Created</th>
+                                    <th className='py-3 px-6'>Title</th>
+                                    <th className='py-3 px-6'>Languages</th>
+                                    <th className='py-3 px-6'>Link</th>
+                                </tr>
+                            </thead>
+                            <tbody className='text-sm font-semibold'>
+                                {this.props.repositories.map((repo,index) => (
+                                    <tr key={`tr-${index}`} className='dark:bg-gray-800'>
+                                        <td className='py-4 px-6'>
+                                            {moment(repo.createdAt).format('MM/DD/YYYY')}
+                                        </td>
+                                        <td className='py-4 px-6'>
+                                            {formatText(repo.name)}
+                                        </td>
+                                        <td className='space-x-3 py-4 px-6'>
+                                            {repo.languages.edges.map((topic,index) => (
+                                                <span key={topic.node.name} className='text-sm'>{topic.node.name}</span>
+                                            ))}
+                                        </td>
+                                        <td className='py-4 px-6'>
+                                            <a href={repo.projectsUrl}>
+                                                <svg xmlns='http://www.w3.org/2000/svg' className='h-5 w-5 cursor-pointer' viewBox='0 0 20 20' fill='currentColor'>
+                                                  <path d='M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z' />
+                                                  <path d='M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z' />
+                                                </svg>
+                                            </a>
+                                        </td>
+                                   </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </main>
         </div>

@@ -43,7 +43,7 @@ class Home extends Component {
                     <title>William Hughes</title>
                     <link rel='icon' href='/favicon.ico' />
                 </Head>
-                <main className='w-full min-h-screen bg-gray-50'>
+                <main className='w-full min-h-screen md:bg-gray-50'>
                     <Introduction homeRef={this.props.myRefs.home}/>
                     <About aboutRef={this.props.myRefs.about}/>
                     <Experience experienceRef={this.props.myRefs.experience}/>
