@@ -14,7 +14,9 @@ const Experience = (props) => {
             position: 'Software Engineer',
             from: 'July 2022',
             to: 'Present',
-            tasks: [],
+            tasks: ['Responsible for designing pipelines for consuming and validating data coming from existing data sources and storing the data in a data lake',
+            'Created and maintained continuous automated and manual testing of the pipelines and the quality of the data flowing through them',
+            'Worked with product teams and data analysts to identify defects in the data and how to resolve them'],
           },
         ],
         'Flip The Pips LLC': [
@@ -66,8 +68,8 @@ const Experience = (props) => {
                 'Troubleshooting software applications within Cloud and Premise environments',
                 'Saving and analyzing network packet captures for UDP/TCP communication']
             },
-          ],
-          'GE Digital': [
+        ],
+        'GE Digital': [
             {
                 id: 5,
                 position: 'Lifecycle Operations Specialist (Site Reliability Engineer)',
@@ -88,7 +90,7 @@ const Experience = (props) => {
                 tasks: ['Upgraded a GE Asset Search Tool by optimizing SQL queries to improve performance and modified the front-end web design to better fit with the GE standard',
                 'Developed 2 search tools and a KPI/SLA Dashboard that provided GE employees with information needed to locate company assets, determine the legal status of devices, measure leasing data, and different hardware ticket metrics that our team was responsible for tracking'],
             },
-          ]
+        ]
       })
     return (
         <section id='experience' className='scroll-m-10' ref={props.experienceRef}>
