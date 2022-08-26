@@ -16,7 +16,9 @@ const Experience = (props) => {
             to: 'Present',
             tasks: ['Responsible for designing pipelines for consuming and validating data coming from existing data sources and storing the data in a data lake',
             'Created and maintained continuous automated and manual testing of the pipelines and the quality of the data flowing through them',
-            'Worked with product teams and data analysts to identify defects in the data and how to resolve them'],
+            'Worked with product teams and data analysts to identify defects in the data and how to resolve them',
+            'Built, maintained, and upgraded data pipelines that would provide data externally to customers and internally for company network security infrastructure',
+            'Worked on ad-hoc requests from sister teams outside normal day-to-day responsibilities'],
           },
         ],
         'Flip The Pips LLC': [
