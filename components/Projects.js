@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const Projects = (props) => {
     const ProjectOneTech = ['AWS','Python','PostgreSQL','MongoDB','Node.js','Express','React','Stripe']
-    const ProjectTwoTech = []
+    const ProjectTwoTech = ['Python','Jupyter Notebook','Flask','TensorFlow','Selenium']
     return (
         <section id='projects' className='scroll-m-10' ref={props.projectsRef}>
             <div className='container p-0 flex flex-col justify-center min-h-screen w-full lg:w-9/12 lg:mx-auto'>
@@ -61,14 +61,14 @@ const Projects = (props) => {
                         </div>
                     </div>
 
-                    {/* <div className='flex items-center justify-center my-10'>
+                    <div className='flex items-center justify-center my-10'>
 
 
                         <div className='float-right m-2 w-8/12 md:w-1/2 2xl:w-1/2'>
                             <div className='shadow-lg block bg-white'>
                                 <img
-                                    src='./screenshots/tbd.png'
-                                    alt='TBD'
+                                    src='./screenshots/tinder-ai-auto-swiper-screenshot.png'
+                                    alt='Repository Screenshot'
                                     className='w-full h-full'
                                 />
                             </div>
@@ -83,15 +83,17 @@ const Projects = (props) => {
                             <hgroup className='relative py-8'>
                                 <h1 className='text-lg font-thin tracking-tightest md:text-xl'> Featured Project </h1>
                                 <h1 className='text-xl tracking-tightest cursor-pointer hover:underline md:text-2xl'> 
-                                    <a href=''> TBD </a>
+                                    <a href='https://github.com/willhughes11/tinder_ai_auto_swiper'> Tinder AI Auto Swiper </a>
                                 </h1>
                             </hgroup>
                             <div className='bg-white p-6 shadow-lg block'>
-                                TBD
+                            Two part system that implements facial recognition, attractiveness ratings and Tinder API and UI interaction to automate Tinder swipe process.
+                            <br/>
+                            Bot: Signs in to Tinder, grabs potential match profile pictures, and sends them to flask server
                             </div>
                         </div>
                                 
-                    </div> */}
+                    </div>
 
                     <section id='pinned-repos'>
                         <hgroup className='relative py-8 text-center'>
