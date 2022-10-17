@@ -93,7 +93,7 @@ const Projects = (props) => {
                             if a racial preference has been set it determines the race of the face, if a minimum rating threshold has been set it rates there attractiveness, 
                             lastly returning the match information and decision.
                             <br/>
-                            Bot: Signs in to Tinder, grabs potential match profile pictures, sends them to flask server, and once the server responds the bot will either swipe left or right.
+                            Bot: Signs in to Tinder, grabs potential match profile pictures, sends them to flask server, and once the server responds the bot will either swipe left or swipe right.
                             </div>
                         </div>
                                 
