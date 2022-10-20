@@ -90,7 +90,7 @@ const Projects = (props) => {
                             Two part system that implements facial recognition, attractiveness ratings and Tinder API and UI interaction to automate Tinder swipe process.
                             <br/>
                             API: The API accepts image URLs or Base64 encoded images, runs facial recognition on the images, picks the most frequently occurring face, 
-                            if a racial preference has been set it determines the race of the face, if a minimum rating threshold has been set it rates there attractiveness, 
+                            if a racial preference has been set it determines the race of the face, if a minimum rating threshold has been set it rates their attractiveness, 
                             lastly returning the match information and decision.
                             <br/>
                             Bot: Signs in to Tinder, grabs potential match profile pictures, sends them to flask server, and once the server responds the bot will either swipe left or swipe right.
