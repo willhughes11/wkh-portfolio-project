@@ -12,9 +12,6 @@ const Contact = (props) => {
                     <div className='py-8 text-center items-center max-w-2xl'>
                         <div className='mx-10 text-l font-medium md:text-xl'>
                             <p>
-                            Currently, I am looking for part-time roles. 
-                            Open to work 10-20 hours per week outside of standard working hours, 
-                            between the times of 5 PM-11 PM ET.
                             </p>
                         </div>
                     </div>
