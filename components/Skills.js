@@ -51,29 +51,41 @@ const Skills = (props) => {
                 title: 'Node.js',
                 logo: '/logos/node.png'
             },
-            {
-                id: 4,
-                name: 'java',
-                title: 'Java',
-                logo: '/logos/java.png'
-            },
+            // {
+            //     id: 4,
+            //     name: 'java',
+            //     title: 'Java',
+            //     logo: '/logos/java.png'
+            // },
             {
               id: 3,
               name: 'csharp',
               title: 'C#',
               logo: '/logos/csharp.png'
             },
-            {
-              id: 5,
-              name: 'php',
-              title: 'PHP',
-              logo: '/logos/php.png'
-            },
+            // {
+            //   id: 5,
+            //   name: 'php',
+            //   title: 'PHP',
+            //   logo: '/logos/php.png'
+            // },
             {
                 id: 6,
                 name: 'go',
                 title: 'Go',
                 logo: '/logos/golang.png'
+            },
+            {
+                id: 7,
+                name: 'rust',
+                title: 'Rust',
+                logo: '/logos/rust.png'
+            },
+            {
+                id: 8,
+                name: 'typescript',
+                title: 'TypeScript',
+                logo: '/logos/typescript.png'
             },
         ],
         'Mobile Development': [

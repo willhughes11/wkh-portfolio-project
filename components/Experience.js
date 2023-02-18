@@ -8,6 +8,18 @@ const classNames = (...classes) => {
 
 const Experience = (props) => {
     const [experience] = useState({
+        'Aperiam Bio': [
+          {
+            id: 6,
+            position: 'Full-Stack Engineer (Part-Time)',
+            from: 'December 2022',
+            to: 'Present',
+            tasks: ['Created and managed database models and object-oriented handlers',
+            'Built a secure public API for the frontend web app to interact with and perform CRUD operations',
+            'Wrote data ingestion scripts and designed data ingestion pipelines',
+            'Deployed Flask API to a PAAS'],
+          }
+        ],
         'Barracuda Networks': [
           {
             id: 1,
@@ -18,7 +30,9 @@ const Experience = (props) => {
             'Created and maintained continuous automated and manual testing of the pipelines and the quality of the data flowing through them',
             'Worked with product teams and data analysts to identify defects in the data and how to resolve them',
             'Built, maintained, and upgraded data pipelines that would provide data externally to customers and internally for company network security infrastructure',
-            'Worked on ad-hoc requests from sister teams outside normal day-to-day responsibilities'],
+            'Worked on ad-hoc requests from sister teams outside normal day-to-day responsibilities',
+            'Created, upgraded, maintained cyber security related microservices',
+            'Performed data analysis on third-party vendor efficacy, used to make business decisions based on the third-party vendors benefit to the company'],
           },
         ],
         'Flip The Pips LLC': [
