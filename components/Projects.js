@@ -100,7 +100,7 @@ const Projects = (props) => {
                             <div>
                                 <div className='bg-transparent lg:bg-white p-4 lg:p-6 shadow-lg absolute lg:relative h-96 lg:h-fit text-sm xl:text-base'>
                                     <div>
-                                        <p>
+                                        <div>
                                             <p className='hidden min-[321px]:block'>
                                                 Two part system that implements facial recognition, attractiveness ratings and Tinder API and UI interaction to automate Tinder swipe process.
                                             </p>
@@ -115,7 +115,7 @@ const Projects = (props) => {
                                                 Bot: Signs in to Tinder, grabs potential match profile pictures, sends them to flask server, and once the server responds the bot will either swipe 
                                                 left or swipe right.
                                             </p>
-                                        </p>
+                                        </div>
                                     </div>
                                     <div className='space-x-2 my-2 flex flex-wrap w-full lg:hidden'>
                                         {ProjectOneTech.map((value,index) => (
