@@ -13,11 +13,12 @@ const Experience = (props) => {
             id: 6,
             position: 'Full-Stack Engineer (Part-Time)',
             from: 'December 2022',
-            to: 'Present',
+            to: 'February 2023',
             tasks: ['Created and managed database models and object-oriented handlers',
             'Built a secure public API for the frontend web app to interact with and perform CRUD operations',
             'Wrote data ingestion scripts and designed data ingestion pipelines',
-            'Deployed Flask API to a PAAS'],
+            'Deployed Flask API to a PAAS', 
+            'Resolved limited memory and platform-level timeout issues when requesting large sets of data by implementing parallel processing to improve performance and compressing data for a smaller response size '],
           }
         ],
         'Barracuda Networks': [

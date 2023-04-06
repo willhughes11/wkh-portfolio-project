@@ -61,10 +61,10 @@ const Projects = (props) => {
                         </div>
                     </div>
 
-                    <div className='flex items-center justify-center my-10'>
+                    <div className='items-center lg:flex lg:justify-center'>
 
 
-                        <div className='float-right m-2 w-8/12 md:w-1/2 2xl:w-1/2'>
+                        <div className='float-right m-2 w-8/12 md:w-1/2 2xl:w-1/2 hidden lg:block'>
                             <div className='shadow-lg block bg-white'>
                                 <img
                                     src='./screenshots/tinder-ai-auto-swiper-screenshot.png'
@@ -72,29 +72,65 @@ const Projects = (props) => {
                                     className='w-full h-full'
                                 />
                             </div>
-                            <div className='m-2'>
+                            <div className='m-2 hidden lg:block'>
                                 {ProjectTwoTech.map((value,index) => (
-                                    <span key={`tech-${index}`} className='px-2 font-thin tracking-tighter 2xl:text-lg'>{value}</span>
+                                    <span key={`tech-${index}`} className='px-1 text-sm font-thin tracking-tighter xl:px-2 2xl:text-lg'>{value}</span>
                                 ))}
                             </div>
                         </div>
 
-                        <div className='float-left m-2 w-4/12 md:w-1/2 2xl:w-1/4'>
+                        <div className='m-2 w-full lg:float-left lg:w-1/2 xl:w-4/12 2xl:w-1/4'>
                             <hgroup className='relative py-8'>
                                 <h1 className='text-lg font-thin tracking-tightest md:text-xl'> Featured Project </h1>
                                 <h1 className='text-xl tracking-tightest cursor-pointer hover:underline md:text-2xl'> 
                                     <a href='https://github.com/willhughes11/tinder_ai_auto_swiper'> Tinder AI Auto Swiper </a>
                                 </h1>
                             </hgroup>
-                            <div className='bg-white p-6 shadow-lg block'>
-                            Two part system that implements facial recognition, attractiveness ratings and Tinder API and UI interaction to automate Tinder swipe process.
-                            <br/>
-                            API: The API accepts image URLs or Base64 encoded images, runs facial recognition on the images, picks the most frequently occurring face, 
-                            if a racial preference has been set it determines the race of the face, if a minimum rating threshold has been set it rates their attractiveness, 
-                            lastly returning the match information and decision.
-                            <br/>
-                            Bot: Signs in to Tinder, grabs potential match profile pictures, sends them to flask server, and once the server responds the bot will either swipe left or swipe right.
+                            {/* <div>
+                                <div className='bg-white p-6 shadow-lg block'>
+                                    Two part system that implements facial recognition, attractiveness ratings and Tinder API and UI interaction to automate Tinder swipe process.
+                                    <br/>
+                                    API: The API accepts image URLs or Base64 encoded images, runs facial recognition on the images, picks the most frequently occurring face, 
+                                    if a racial preference has been set it determines the race of the face, if a minimum rating threshold has been set it rates their attractiveness, 
+                                    lastly returning the match information and decision.
+                                    <br/>
+                                    Bot: Signs in to Tinder, grabs potential match profile pictures, sends them to flask server, and once the server responds the bot will either swipe left or swipe right.
+                                </div>
+                            </div> */}
+                            <div>
+                                <div className='bg-transparent lg:bg-white p-4 lg:p-6 shadow-lg absolute lg:relative h-96 lg:h-fit text-sm xl:text-base'>
+                                    <div>
+                                        <div>
+                                            <p className='hidden min-[321px]:block'>
+                                                Two part system that implements facial recognition, attractiveness ratings and Tinder API and UI interaction to automate Tinder swipe process.
+                                            </p>
+                                            <br className='hidden min-[376px]:block'/>
+                                            <p >
+                                                API: The API accepts image URLs or Base64 encoded images, runs facial recognition on the images, picks the most frequently occurring face, 
+                                                if a racial preference has been set it determines the race of the face, if a minimum rating threshold has been set it rates their attractiveness, 
+                                                lastly returning the match information and decision.
+                                            </p>
+                                            <br className='hidden min-[376px]:block'/>
+                                            <p>
+                                                Bot: Signs in to Tinder, grabs potential match profile pictures, sends them to flask server, and once the server responds the bot will either swipe 
+                                                left or swipe right.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className='space-x-2 my-2 flex flex-wrap w-full lg:hidden'>
+                                        {ProjectOneTech.map((value,index) => (
+                                            <span key={`tech-${index}`} className='font-thin tracking-tighter'>{value}</span>
+                                        ))}
+                                    </div>
+                                </div>
+                                <div className='shadow-lg opacity-5 overflow-hidden items-center block lg:hidden '>
+                                    <img
+                                        src='./screenshots/tinder-ai-auto-swiper-screenshot.png'
+                                        className='h-96 min-w-[48rem] overflow-hidden w-full'
+                                    />
+                                </div>
                             </div>
+
                         </div>
                                 
                     </div>
