@@ -18,14 +18,14 @@ class ProjectsPage extends Component {
                 <title>William Hughes - Projects</title>
                 <link rel='icon' href='/favicon.ico' />
             </Head>
-            <main className='w-full min-h-screen bg-gray-800'>
+            <main className='w-full min-h-screen bg-black'>
                 <div className='container py-4 md:mx-auto'>
                     <hgroup className='relative py-8 text-center'>
-                        <h1 className='p-2 m-2 text-gray-400 text-4xl md:text-6xl'> Projects </h1>
+                        <h1 className='p-2 m-2 text-white text-4xl md:text-6xl'> Projects </h1>
                     </hgroup>
                     <div className='overflow-auto'>
-                        <table className='table-auto overflow-scroll w-full text-sm text-left text-gray-500 dark:text-gray-400'>
-                            <thead className='text-sm text-gray-700 uppercase dark:bg-gray-700 dark:text-gray-400'>
+                        <table className='table-auto overflow-scroll w-full text-sm text-left'>
+                            <thead className='text-sm text-white uppercase bg-neutral-700'>
                                 <tr className='p-4'>
                                     <th className='py-3 px-6'>Created</th>
                                     <th className='py-3 px-6'>Title</th>
@@ -33,9 +33,9 @@ class ProjectsPage extends Component {
                                     <th className='py-3 px-6'>Link</th>
                                 </tr>
                             </thead>
-                            <tbody className='text-sm font-semibold'>
+                            <tbody className='text-sm font-semibold text-neutral-200'>
                                 {this.props.repositories.map((repo,index) => (
-                                    <tr key={`tr-${index}`} className='dark:bg-gray-800'>
+                                    <tr key={`tr-${index}`} className='bg-neutral-900'>
                                         <td className='py-4 px-6'>
                                             {moment(repo.createdAt).format('MM/DD/YYYY')}
                                         </td>
@@ -138,9 +138,11 @@ const formatText = (string) => {
             arr[index] = 'DB'
         } else if (element === 'Wkh' || element === 'wkh') {
             arr[index] = 'WKH'
-        }else if (element === 'Nlp' || element === 'nlp') {
+        } else if (element === 'Nlp' || element === 'nlp') {
             arr[index] = 'NLP'
-        } else {
+        } else if (element === 'Ai' || element === 'ai') {
+            arr[index] = 'AI'
+        }else {
             arr[index] = capitalizeFirstLetter(element)
         }
     });

@@ -8,19 +8,6 @@ const classNames = (...classes) => {
 
 const Experience = (props) => {
     const [experience] = useState({
-        'Aperiam Bio': [
-          {
-            id: 6,
-            position: 'Full-Stack Engineer (Part-Time)',
-            from: 'December 2022',
-            to: 'February 2023',
-            tasks: ['Created and managed database models and object-oriented handlers',
-            'Built a secure public API for the frontend web app to interact with and perform CRUD operations',
-            'Wrote data ingestion scripts and designed data ingestion pipelines',
-            'Deployed Flask API to a PAAS', 
-            'Resolved limited memory and platform-level timeout issues when requesting large sets of data by implementing parallel processing to improve performance and compressing data for a smaller response size '],
-          }
-        ],
         'Barracuda Networks': [
           {
             id: 1,
@@ -35,6 +22,19 @@ const Experience = (props) => {
             'Created, upgraded, maintained cyber security related microservices',
             'Performed data analysis on third-party vendor efficacy, used to make business decisions based on the third-party vendors benefit to the company'],
           },
+        ],
+        'Aperiam Bio': [
+          {
+            id: 6,
+            position: 'Full-Stack Engineer (Part-Time)',
+            from: 'December 2022',
+            to: 'February 2023',
+            tasks: ['Created and managed database models and object-oriented handlers',
+            'Built a secure public API for the frontend web app to interact with and perform CRUD operations',
+            'Wrote data ingestion scripts and designed data ingestion pipelines',
+            'Deployed Flask API to a PAAS', 
+            'Resolved limited memory and platform-level timeout issues when requesting large sets of data by implementing parallel processing to improve performance and compressing data for a smaller response size '],
+          }
         ],
         'Flip The Pips LLC': [
             {
@@ -110,13 +110,13 @@ const Experience = (props) => {
         ]
       })
     return (
-        <section id='experience' className='scroll-m-10' ref={props.experienceRef}>
-            <div className='container p-0 flex flex-col justify-center min-h-screen w-full mx-2 lg:w-9/12 lg:mx-auto'>
+        <section id='experience' className='scroll-m-10 mx-2' ref={props.experienceRef}>
+            <div className='container p-0 flex flex-col justify-center min-h-screen w-full lg:w-9/12 lg:mx-auto'>
                 <hgroup className='relative my-8 text-center'>
                     <h1 className='p-2 m-2 text-4xl font-thin md:tracking-widest md:text-6xl'> Experience </h1>
                     <hr />
                 </hgroup>
-                <div className='bg-white w-full flex flex-col px-2 py-2 lg:flex-row lg:shadow-lg sm:px-0'>
+                <div className='bg-neutral-900 w-full flex flex-col px-2 py-2 lg:flex-row lg:shadow-lg sm:px-0'>
                     <Tab.Group>
                       <Tab.List className='w-full break-normal flex rounded-xl p-1 overflow-x-auto lg:w-fit flex-row lg:min-w-max lg:flex-col'>
                         {Object.keys(experience).map((category) => (
@@ -124,10 +124,10 @@ const Experience = (props) => {
                             key={category}
                             className={({ selected }) =>
                               classNames(
-                                'w-full font-medium text-left whitespace-nowrap p-4 md:p-2.5',
+                                'w-full font-medium text-left whitespace-nowrap my-0.5 p-4 md:p-2.5',
                                 selected
-                                  ? 'bg-white'
-                                  : 'text-gray-500 hover:bg-white/[0.12] hover:text-gray-800'
+                                  ? 'bg-neutral-800 rounded-lg'
+                                  : 'text-white hover:bg-neutral-700 hover:text-white rounded-lg'
                               )
                             }
                           >
@@ -140,8 +140,8 @@ const Experience = (props) => {
                           <Tab.Panel
                             key={idx}
                             className={classNames(
-                              'rounded-xl bg-white p-1 overflow-auto h-52 md:h-56 lg:h-72 xl:h-[18rem] 2xl:h-[22rem]',
-                              'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400'
+                              'rounded-xl bg-neutral-900 p-1 overflow-auto h-52 md:h-56 lg:h-72 xl:h-[18rem] 2xl:h-[22rem]',
+                              'ring-white ring-opacity-60 ring-offset-2'
                             )}
                           >
                             <ul>

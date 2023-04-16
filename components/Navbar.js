@@ -50,7 +50,7 @@ const NavBar = (props) => {
   }
 
   return (
-    <Disclosure as='nav' className='bg-gray-800 w-full fixed top-0 z-50'>
+    <Disclosure as='nav' className='bg-black w-full fixed top-0 z-50'>
       {({ open }) => (
         <>
           <div className='max-w-7xl mx-auto px-2 sm:px-6 lg:px-8'>
@@ -66,7 +66,7 @@ const NavBar = (props) => {
                 </div>
                 <div className='absolute inset-y-0 right-0 flex items-center sm:hidden'>
                   {/* Mobile menu button*/}
-                  <Disclosure.Button className='inline-sm:flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'>
+                  <Disclosure.Button className='inline-sm:flex items-center justify-center p-2 rounded-md text-white  hover:text-white hover:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'>
                       <span className='sr-only'>Open main menu</span>
                       {open ? (
                         <XIcon className='block h-6 w-6' aria-hidden='true' />
@@ -83,7 +83,7 @@ const NavBar = (props) => {
                           key={item.name}
                           // href={item.href}
                           className={classNames(
-                            item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                            item.current ? 'bg-neutral-800 text-white' : 'text-gray-300 hover:bg-neutral-700 hover:text-white',
                             'px-3 py-2 rounded-md font-medium m-2 cursor-pointer'
                           )}
                           onClick={() => 
@@ -107,7 +107,7 @@ const NavBar = (props) => {
                   as='a'
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                    item.current ? 'bg-neutral-800 text-white' : 'text-gray-300 hover:bg-neutral-800 hover:text-white',
                     'block px-3 py-2 rounded-md text-base font-medium'
                   )}
                   onClick={() => 
