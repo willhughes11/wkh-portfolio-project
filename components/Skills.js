@@ -251,12 +251,12 @@ const Skills = (props) => {
                             <h1 key={`skill-${index}-title`} className='text-center font-medium text-xl my-4'> {skill} </h1>
                             <div key={`skill-${index}-logos`} className='flex flex-wrap justify-center'>
                                 {skills[skill].map((skill) =>  (
-                                    <div key={`skill-${index}-img-wrapper-${skill.id}-${skill.name}`} className='group inline-block my-1 mx-2 text-center xl:w-20'>
+                                    <div key={`skill-${index}-img-wrapper-${skill.id}-${skill.name}`} className='group inline-block my-1 mx-2 text-center max-xl:2xl:w-20 max-[320px]:w-1/4'>
                                         <div 
                                             alt={`skill-${index}-logo-${skill.id}-${skill.name}`} 
                                             key={`skill-${index}-logo-${skill.id}-${skill.name}`}
                                             id={`skill-${index}-logo-${skill.id}-${skill.name}`}
-                                            className={`mx-auto mb-4 ${skill.bgImageClass} bg-repeat-position-size transition ease-in-out group-hover:scale-150 group-hover:duration-300 w-14 h-14 md:w-14 2xl:w-20`}
+                                            className={`mx-1 mb-4 ${skill.bgImageClass} bg-repeat-position-size transition ease-in-out group-hover:scale-150 group-hover:duration-300 w-14 h-14 md:w-14`}
                                         ></div>
                                         <span key={`skill-${index}-title-${skill.id}-${skill.name}`} className='tracking-tighter transition ease-in-out opacity-0 group-hover:duration-500 group-hover:opacity-100'>{skill.title}</span>
                                     </div>
