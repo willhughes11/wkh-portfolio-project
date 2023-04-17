@@ -2,6 +2,8 @@ import { useRef } from 'react';
 import Layout1 from '../components/layouts/Layout1';
 import Layout2 from '../components/layouts/Layout2';
 import '../styles/globals.css';
+import '../styles/style.css'
+
 const layouts = {
     L1: Layout1,
     L2: Layout2,

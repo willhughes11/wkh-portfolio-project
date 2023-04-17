@@ -92,7 +92,7 @@ const Education = () => {
                     <h1 className='p-2 m-2 text-3xl font-thin md:tracking-widest md:text-5xl'> Education </h1>
                     <hr />
                 </hgroup>
-                <div className='bg-white w-full flex flex-col px-2 py-2 lg:flex-row lg:shadow-lg sm:px-0'>
+                <div className='bg-neutral-900 w-full flex flex-col px-2 py-2 lg:flex-row lg:shadow-lg sm:px-0'>
                     <Tab.Group>
                       <Tab.List className='w-full flex rounded-xl p-1 overflow-x-auto lg:w-fit flex-row lg:min-w-max lg:flex-col'>
                         {Object.keys(education).map((category) => (
@@ -100,10 +100,10 @@ const Education = () => {
                             key={category}
                             className={({ selected }) =>
                               classNames(
-                                'font-medium text-center md:text-left whitespace-nowrap p-4 md:p-2.5',
+                                'font-medium text-center md:text-left whitespace-nowrap p-4 md:p-2.5 my-0.5',
                                 selected
-                                  ? 'bg-white'
-                                  : 'text-gray-500 hover:bg-white/[0.12] hover:text-gray-800'
+                                  ? 'bg-neutral-800 rounded-lg'
+                                  : 'text-white hover:bg-neutral-700 hover:text-white rounded-lg'
                               )
                             }
                           >
@@ -116,8 +116,8 @@ const Education = () => {
                           <Tab.Panel
                             key={idx}
                             className={classNames(
-                              'rounded-xl bg-white p-1 min-w-full overflow-auto h-40 lg:h-48 xl:h-44 2xl:h-52',
-                              'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400'
+                              'rounded-xl bg-neutral-900 p-1 min-w-full overflow-auto h-40 lg:h-48 xl:h-44 2xl:h-52',
+                              'ring-white ring-opacity-60 ring-offset-2'
                             )}
                           >
                             <ul>
