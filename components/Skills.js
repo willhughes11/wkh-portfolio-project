@@ -251,7 +251,7 @@ const Skills = (props) => {
                             <h1 key={`skill-${index}-title`} className='text-center font-medium text-xl my-4'> {skill} </h1>
                             <div key={`skill-${index}-logos`} className='flex flex-wrap justify-center'>
                                 {skills[skill].map((skill) =>  (
-                                    <div key={`skill-${index}-img-wrapper-${skill.id}-${skill.name}`} className='group inline-block my-1 mx-2 text-center w-20'>
+                                    <div key={`skill-${index}-img-wrapper-${skill.id}-${skill.name}`} className='group inline-block my-1 mx-2 text-center xl:w-20'>
                                         <div 
                                             alt={`skill-${index}-logo-${skill.id}-${skill.name}`} 
                                             key={`skill-${index}-logo-${skill.id}-${skill.name}`}
