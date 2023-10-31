@@ -8,117 +8,6 @@ body {
     background-size: contain;
 }
 
-.angular-png {
-    background-image: url("../public/logos/angular.png");
-}
-
-
-.csharp-png {
-    background-image: url("../public/logos/csharp.png");
-}
-
-.css-png {
-    background-image: url("../public/logos/css.png");
-}
-
-.golang-png {
-    background-image: url("../public/logos/golang.png");
-}
-
-.grafana-png {
-    background-image: url("../public/logos/grafana.png");
-}
-
-.html-png {
-    background-image: url("../public/logos/html.png");
-}
-
-.influxdb-png {
-    background-image: url("../public/logos/influxdb.png");
-}
-
-.java-png {
-    background-image: url("../public/logos/java.png");
-}
-
-.javascript-png {
-    background-image: url("../public/logos/javascript.png");
-}
-
-.kotlin-png {
-    background-image: url("../public/logos/kotlin.png");
-}
-
-.matplotlib-png {
-    background-image: url("../public/logos/matplotlib.png");
-}
-
-.mongo-png {
-    background-image: url("../public/logos/mongo.png");
-}
-
-.nextjs-png {
-    background-image: url("../public/logos/nextjs.png");
-    filter: brightness(0) invert(1);
-}
-
-.node-png {
-    background-image: url("../public/logos/node.png");
-}
-
-.numpy-png {
-    background-image: url("../public/logos/numpy.png");
-}
-
-.pandas-png {
-    background-image: url("../public/logos/pandas.png");
-}
-
-.php-png {
-    background-image: url("../public/logos/php.png");
-}
-
-.postgres-png {
-    background-image: url("../public/logos/postgres.png");
-}
-
-.python-png {
-    background-image: url("../public/logos/python.png");
-}
-
-.pytorch-png {
-    background-image: url("../public/logos/pytorch.png");
-}
-
-.react-png {
-    background-image: url("../public/logos/react.png");
-}
-
-.rust-png {
-    background-image: url("../public/logos/rust.png");
-    filter: brightness(0) invert(1);
-}
-
-.selenium-png {
-    background-image: url("../public/logos/selenium.png");
-}
-
-.sensu-png {
-    background-image: url("../public/logos/sensu.png");
-}
-
-.swift-png {
-    background-image: url("../public/logos/swift.png");
-}
-
-.tensorflow-png {
-    background-image: url("../public/logos/tensorflow.png");
-}
-
-.typescript-png {
-    background-image: url("../public/logos/typescript.png");
-}
-
 .white-border {
     -webkit-filter: drop-shadow(1px 1px 0 white)
                     drop-shadow(-1px 1px 0 white)
@@ -130,4 +19,18 @@ body {
             drop-shadow(1px -1px 0 white)
             drop-shadow(-1px -1px 0 white);
 }
+
+/* For WebKit browsers (such as Chrome, Safari) */
+/* Change the width and color of the scrollbar */
+::-webkit-scrollbar {
+    width: 5px; /* Width of the scrollbar */
+  }
   
+  ::-webkit-scrollbar-track {
+    background: transparent; /* Color of the scrollbar track */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 5px; /* Rounded corners of the thumb */
+  }

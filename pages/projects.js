@@ -1,57 +1,57 @@
-import React, { Component } from 'react';
-import Head from 'next/head';
+import React, { Component } from "react";
+import Head from "next/head";
 import { 
     ApolloClient, 
     InMemoryCache,
     createHttpLink,
     gql
-} from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
-import moment from 'moment';
+} from "@apollo/client";
+import { setContext } from "@apollo/client/link/context";
+import moment from "moment";
 
 
 class ProjectsPage extends Component {
     render() {
         return(
-            <div className='projects'>
+            <div className="projects">
             <Head>
                 <title>William Hughes - Projects</title>
-                <link rel='icon' href='/favicon.ico' />
+                <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main className='w-full min-h-screen bg-black'>
-                <div className='container py-4 md:mx-auto'>
-                    <hgroup className='relative py-8 text-center'>
-                        <h1 className='p-2 m-2 text-white text-4xl md:text-6xl'> Projects </h1>
+            <main className="w-full min-h-screen bg-black">
+                <div className="container py-4 md:mx-auto">
+                    <hgroup className="relative py-8 text-center">
+                        <h1 className="p-2 m-2 text-white text-4xl md:text-6xl"> Projects </h1>
                     </hgroup>
-                    <div className='overflow-auto'>
-                        <table className='table-auto overflow-scroll w-full text-sm text-left'>
-                            <thead className='text-sm text-white uppercase bg-neutral-700'>
-                                <tr className='p-4'>
-                                    <th className='py-3 px-6'>Created</th>
-                                    <th className='py-3 px-6'>Title</th>
-                                    <th className='py-3 px-6'>Languages</th>
-                                    <th className='py-3 px-6'>Link</th>
+                    <div className="overflow-auto">
+                        <table className="table-auto overflow-scroll w-full text-sm text-left">
+                            <thead className="text-sm text-white uppercase bg-neutral-700">
+                                <tr className="p-4">
+                                    <th className="py-3 px-6">Created</th>
+                                    <th className="py-3 px-6">Title</th>
+                                    <th className="py-3 px-6">Languages</th>
+                                    <th className="py-3 px-6">Link</th>
                                 </tr>
                             </thead>
-                            <tbody className='text-sm font-semibold text-neutral-200'>
+                            <tbody className="text-sm font-semibold text-neutral-200">
                                 {this.props.repositories.map((repo,index) => (
-                                    <tr key={`tr-${index}`} className='bg-neutral-900'>
-                                        <td className='py-4 px-6'>
-                                            {moment(repo.createdAt).format('MM/DD/YYYY')}
+                                    <tr key={`tr-${index}`} className="bg-neutral-900">
+                                        <td className="py-4 px-6">
+                                            {moment(repo.createdAt).format("MM/DD/YYYY")}
                                         </td>
-                                        <td className='py-4 px-6'>
+                                        <td className="py-4 px-6">
                                             {formatText(repo.name)}
                                         </td>
-                                        <td className='space-x-3 py-4 px-6'>
+                                        <td className="space-x-3 py-4 px-6">
                                             {repo.languages.edges.map((topic,index) => (
-                                                <span key={topic.node.name} className='text-sm'>{topic.node.name}</span>
+                                                <span key={topic.node.name} className="text-sm">{topic.node.name}</span>
                                             ))}
                                         </td>
-                                        <td className='py-4 px-6'>
+                                        <td className="py-4 px-6">
                                             <a href={repo.url}>
-                                                <svg xmlns='http://www.w3.org/2000/svg' className='h-5 w-5 cursor-pointer' viewBox='0 0 20 20' fill='currentColor'>
-                                                  <path d='M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z' />
-                                                  <path d='M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z' />
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 cursor-pointer" viewBox="0 0 20 20" fill="currentColor">
+                                                  <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                                                  <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
                                                 </svg>
                                             </a>
                                         </td>
@@ -69,7 +69,7 @@ class ProjectsPage extends Component {
 
 export const getStaticProps = async () => {
     const httpLink = createHttpLink({
-        uri: 'https://api.github.com/graphql',
+        uri: "https://api.github.com/graphql",
       });
       
       const authLink = setContext((_, { headers }) => {
@@ -124,35 +124,35 @@ export const getStaticProps = async () => {
 }
 
 const formatText = (string) => {
-    const header = capitalizeFirstLetter(string.split(/(?=[A-Z])/).join(' ').replace(/-/g, ' ').replace(/ +(?= )/g,''))
+    const header = capitalizeFirstLetter(string.split(/(?=[A-Z])/).join(" ").replace(/-/g, " ").replace(/ +(?= )/g,""))
 
-    let arr = header.split(' ')
+    let arr = header.split(" ")
     arr.forEach((element,index) => {
-        if (element === 'Api' || element === 'api') {
+        if (element === "Api" || element === "api") {
             arr[index] = element.toUpperCase()
-        } else if (element === 'Ios'){
-            arr[index] = 'iOS'
-        } else if (element === 'Postgresql'){
-            arr[index] = 'PostgreSQL'
-        } else if (element === 'db') {
-            arr[index] = 'DB'
-        } else if (element === 'Wkh' || element === 'wkh') {
-            arr[index] = 'WKH'
-        } else if (element === 'Nlp' || element === 'nlp') {
-            arr[index] = 'NLP'
-        } else if (element === 'Ai' || element === 'ai') {
-            arr[index] = 'AI'
+        } else if (element === "Ios"){
+            arr[index] = "iOS"
+        } else if (element === "Postgresql"){
+            arr[index] = "PostgreSQL"
+        } else if (element === "db") {
+            arr[index] = "DB"
+        } else if (element === "Wkh" || element === "wkh") {
+            arr[index] = "WKH"
+        } else if (element === "Nlp" || element === "nlp") {
+            arr[index] = "NLP"
+        } else if (element === "Ai" || element === "ai") {
+            arr[index] = "AI"
         }else {
             arr[index] = capitalizeFirstLetter(element)
         }
     });
 
-    return arr.join(' ')
+    return arr.join(" ")
 }
 
 const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-ProjectsPage.layout = 'L2';
+ProjectsPage.layout = "L2";
 export default ProjectsPage

@@ -1,27 +1,27 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 const Projects = (props) => {
-    const ProjectOneTech = ['AWS','Python','PostgreSQL','MongoDB','Node.js','Express','React','Stripe']
-    const ProjectTwoTech = ['Python','Jupyter Notebook','Flask','TensorFlow','Selenium']
+    const ProjectOneTech = ["AWS","Python","PostgreSQL","MongoDB","Node.js","Express","React","Stripe"]
+    const ProjectTwoTech = ["Python","Jupyter Notebook","Flask","TensorFlow","Selenium"]
     return (
-        <section id='projects' className='scroll-m-10 mx-2' ref={props.projectsRef}>
-            <div className='container p-0 flex flex-col justify-center min-h-screen w-full lg:w-9/12 lg:mx-auto'>
-                <hgroup className='relative py-8 text-center'>
-                    <h1 className='p-2 m-2 text-4xl font-thin md:tracking-widest md:text-6xl'> Projects </h1>
+        <section id="projects" className="scroll-m-10 mx-2" ref={props.projectsRef}>
+            <div className="container p-0 flex flex-col justify-center min-h-screen w-full lg:w-9/12 lg:mx-auto">
+                <hgroup className="relative py-8 text-center">
+                    <h1 className="p-2 m-2 text-4xl font-thin md:tracking-widest md:text-6xl"> Projects </h1>
                     <hr />
                 </hgroup>
-                <div className='w-full flex flex-col px-2 py-2 sm:px-0'>
+                <div className="w-full flex flex-col px-2 py-2 sm:px-0">
                     {/* First Project */}
-                    <div className='items-center lg:flex lg:justify-center'>
-                        <div className='m-2 w-full lg:float-left lg:w-1/2 xl:w-4/12 2xl:w-1/4'>
-                            <hgroup className='relative py-8'>
-                                <h1 className='text-lg font-thin tracking-tightest md:text-xl'> Featured Project </h1>
-                                <h1 className='text-xl tracking-tightest cursor-pointer hover:underline md:text-2xl'> 
-                                    <a href='https://app.beta.flipthepips.com/'> Flip The Pips App </a>
+                    <div className="items-center lg:flex lg:justify-center">
+                        <div className="m-2 w-full lg:float-left lg:w-1/2 xl:w-4/12 2xl:w-1/4">
+                            <hgroup className="relative py-8">
+                                <h1 className="text-lg font-thin tracking-tightest md:text-xl"> Featured Project </h1>
+                                <h1 className="text-xl tracking-tightest cursor-pointer hover:underline md:text-2xl"> 
+                                    <a href="https://app.beta.flipthepips.com/"> Flip The Pips App </a>
                                 </h1>
                             </hgroup>
                             <div>
-                                <div className='bg-transparent lg:bg-neutral-900 p-4 lg:p-6 shadow-lg absolute lg:relative h-96 lg:h-fit text-sm xl:text-base'>
+                                <div className="bg-transparent lg:bg-neutral-900 p-4 lg:p-6 shadow-lg absolute rounded-lg lg:relative h-96 lg:h-fit text-sm xl:text-base">
                                     <div>
                                         <p>
                                             Flip the Pips LLC is a social trading and forex investment company that focuses on
@@ -32,78 +32,78 @@ const Projects = (props) => {
                                         </p>
                                     </div>
                                     {/* Tech stack styling for mobile */}
-                                    <div className='space-x-2 my-2 flex flex-wrap w-full lg:hidden'>
+                                    <div className="space-x-2 my-2 flex flex-wrap w-full lg:hidden">
                                         {ProjectOneTech.map((value,index) => (
-                                            <span key={`tech-${index}`} className='font-thin tracking-tighter'>{value}</span>
+                                            <span key={`tech-${index}`} className="font-thin tracking-tighter">{value}</span>
                                         ))}
                                     </div>
                                 </div>
                                 {/* Screenshot of website for mobile style */}
-                                <div className='shadow-lg opacity-10 overflow-hidden items-center block lg:hidden'>
+                                <div className="shadow-lg opacity-10 overflow-hidden items-center block lg:hidden">
                                     <img
-                                        src='./screenshots/flipThePipsAppSC.png'
-                                        className='h-96 min-w-[48rem] overflow-hidden'
+                                        src="./screenshots/flipThePipsAppSC.png"
+                                        className="h-96 min-w-[48rem] overflow-hidden"
                                     />
                                 </div>
                             </div>
                         </div>
                         
                         {/* Screenshot and tech stack for laptops+ */}
-                        <div className='float-right m-2 w-8/12 md:w-1/2 2xl:w-1/2 hidden lg:block'>
-                            <div className='shadow-lg block'>
+                        <div className="float-right m-2 w-8/12 md:w-1/2 2xl:w-1/2 hidden rounded-lg lg:block">
+                            <div className="shadow-lg block">
                                 <img
-                                    src='./screenshots/flipThePipsAppSC.png'
-                                    className='w-full h-full'
+                                    src="./screenshots/flipThePipsAppSC.png"
+                                    className="w-full h-full"
                                 />
                             </div>
-                            <div className='m-2 hidden lg:block'>
+                            <div className="m-2 hidden lg:block">
                                 {ProjectOneTech.map((value,index) => (
-                                    <span key={`tech-${index}`} className='px-1 font-thin tracking-tighter xl:px-2 2xl:text-lg'>{value}</span>
+                                    <span key={`tech-${index}`} className="px-1 font-thin tracking-tighter xl:px-2 2xl:text-lg">{value}</span>
                                 ))}
                             </div>
                         </div>
                     </div>
                     
                     {/* Second Project */}
-                    <div className='items-center lg:flex lg:justify-center'>
+                    <div className="items-center lg:flex lg:justify-center">
 
                         {/* Screenshot and tech stack for laptops+ */}
-                        <div className='float-right m-2 w-8/12 md:w-1/2 2xl:w-1/2 hidden lg:block'>
-                            <div className='shadow-lg block bg-white'>
+                        <div className="float-right m-2 w-8/12 md:w-1/2 2xl:w-1/2 hidden lg:block">
+                            <div className="shadow-lg block bg-white">
                                 <img
-                                    src='./screenshots/tinder-ai-auto-swiper-screenshot.png'
-                                    alt='Repository Screenshot'
-                                    className='w-full h-full'
+                                    src="./screenshots/tinder-ai-auto-swiper-screenshot.png"
+                                    alt="Repository Screenshot"
+                                    className="w-full h-full"
                                 />
                             </div>
-                            <div className='m-2 hidden lg:block'>
+                            <div className="m-2 hidden lg:block">
                                 {ProjectTwoTech.map((value,index) => (
-                                    <span key={`tech-${index}`} className='px-1 font-thin tracking-tighter xl:px-2 2xl:text-lg'>{value}</span>
+                                    <span key={`tech-${index}`} className="px-1 font-thin tracking-tighter xl:px-2 2xl:text-lg">{value}</span>
                                 ))}
                             </div>
                         </div>
 
-                        <div className='m-2 w-full lg:float-left lg:w-1/2 xl:w-4/12 2xl:w-1/4'>
-                            <hgroup className='relative py-8'>
-                                <h1 className='text-lg font-thin tracking-tightest md:text-xl'> Featured Project </h1>
-                                <h1 className='text-xl tracking-tightest cursor-pointer hover:underline md:text-2xl'> 
-                                    <a href='https://github.com/willhughes11/tinder_ai_auto_swiper'> Tinder AI Auto Swiper </a>
+                        <div className="m-2 w-full lg:float-left lg:w-1/2 xl:w-4/12 2xl:w-1/4">
+                            <hgroup className="relative py-8">
+                                <h1 className="text-lg font-thin tracking-tightest md:text-xl"> Featured Project </h1>
+                                <h1 className="text-xl tracking-tightest cursor-pointer hover:underline md:text-2xl"> 
+                                    <a href="https://github.com/willhughes11/tinder_ai_auto_swiper"> Tinder AI Auto Swiper </a>
                                 </h1>
                             </hgroup>
                             <div>
-                                <div className='bg-transparent lg:bg-neutral-900 p-4 lg:p-6 shadow-lg absolute lg:relative h-96 lg:h-fit text-sm xl:text-base'>
+                                <div className="bg-transparent lg:bg-neutral-900 p-4 lg:p-6 shadow-lg absolute rounded-lg lg:relative h-96 lg:h-fit text-sm xl:text-base">
                                     <div>
                                         <div>
-                                            <p className='hidden min-[321px]:block'>
+                                            <p className="hidden min-[321px]:block">
                                                 Two part system that implements facial recognition, attractiveness ratings and Tinder API and UI interaction to automate Tinder swipe process.
                                             </p>
-                                            <br className='hidden min-[376px]:block'/>
+                                            <br className="hidden min-[376px]:block"/>
                                             <p >
                                                 API: The API accepts image URLs or Base64 encoded images, runs facial recognition on the images, picks the most frequently occurring face, 
                                                 if a racial preference has been set it determines the race of the face, if a minimum rating threshold has been set it rates their attractiveness, 
                                                 lastly returning the match information and decision.
                                             </p>
-                                            <br className='hidden min-[376px]:block'/>
+                                            <br className="hidden min-[376px]:block"/>
                                             <p>
                                                 Bot: Signs in to Tinder, grabs potential match profile pictures, sends them to flask server, and once the server responds the bot will either swipe 
                                                 left or swipe right.
@@ -111,17 +111,17 @@ const Projects = (props) => {
                                         </div>
                                     </div>
                                     {/* Tech stack styling for mobile */}
-                                    <div className='space-x-2 my-2 flex flex-wrap w-full lg:hidden'>
+                                    <div className="space-x-2 my-2 flex flex-wrap w-full lg:hidden">
                                         {ProjectOneTech.map((value,index) => (
-                                            <span key={`tech-${index}`} className='font-thin tracking-tighter'>{value}</span>
+                                            <span key={`tech-${index}`} className="font-thin tracking-tighter">{value}</span>
                                         ))}
                                     </div>
                                 </div>
                                 {/* Screenshot of website for mobile style */}
-                                <div className='shadow-lg opacity-10 overflow-hidden items-center block lg:hidden '>
+                                <div className="shadow-lg opacity-10 overflow-hidden items-center block lg:hidden ">
                                     <img
-                                        src='./screenshots/tinder-ai-auto-swiper-screenshot.png'
-                                        className='h-96 min-w-[48rem] overflow-hidden w-full'
+                                        src="./screenshots/tinder-ai-auto-swiper-screenshot.png"
+                                        className="h-96 min-w-[48rem] overflow-hidden w-full"
                                     />
                                 </div>
                             </div>
@@ -130,31 +130,31 @@ const Projects = (props) => {
                                 
                     </div>
 
-                    <section id='pinned-repos'>
-                        <hgroup className='relative py-8 text-center'>
-                            <h1 className='p-2 m-2 text-2xl font-thin md:tracking-widest md:text-4xl'> Pinned Repos </h1>
+                    <section id="pinned-repos">
+                        <hgroup className="relative py-8 text-center">
+                            <h1 className="p-2 m-2 text-2xl font-thin md:tracking-widest md:text-4xl"> Pinned Repos </h1>
                             <hr />
                         </hgroup>
-                        <div className='flex flex-wrap items-center justify-center w-full'>
+                        <div className="flex flex-wrap items-center justify-center w-full">
                             {props.pinnedItems.map((item,index) => (
-                                <div key={`project-${index}-container`} className='bg-neutral-900 p-6 shadow-lg m-3 block h-80 w-80 relative 2xl:h-[21rem] 2xl:w-[21rem]'>
-                                    <h1 key={`project-${index}-title`} className='font-medium text-2xl my-4 hover:underline'>
+                                <div key={`project-${index}-container`} className="bg-neutral-900 p-6 shadow-lg m-3 block h-80 w-80 relative rounded-lg 2xl:h-[21rem] 2xl:w-[21rem]">
+                                    <h1 key={`project-${index}-title`} className="font-medium text-2xl my-4 hover:underline">
                                         <a key={item.url} href={item.url}>
                                             {formatText(item.name)} 
                                         </a>
                                     </h1>
-                                    <p key={`project-${index}-description`} className='my-4 text-sm'> {item.description} </p>
-                                    <div key={`project-${index}-subtitle`} className='flex flex-wrap space-x-3 absolute bottom-0 my-4'>
+                                    <p key={`project-${index}-description`} className="my-4 text-sm"> {item.description} </p>
+                                    <div key={`project-${index}-subtitle`} className="flex flex-wrap space-x-3 absolute bottom-0 my-4">
                                         {item.repositoryTopics.edges.map((topic,index) => (
-                                            <span key={topic.node.topic.name} className='font-extralight text-sm my-4'>{formatText(topic.node.topic.name)}</span>
+                                            <span key={topic.node.topic.name} className="font-extralight text-sm my-4">{formatText(topic.node.topic.name)}</span>
                                         ))}
                                     </div>
                                 </div>
                             ))}
                         </div>
-                        <div className='flex justify-center'>
-                            <Link href='/projects'>
-                                <button className='border-white text-white border-4 p-3 rounded-lg m-4 transition ease-in-out hover:bg-white hover:border-transparent hover:text-black'> 
+                        <div className="flex justify-center">
+                            <Link href="/projects">
+                                <button className="border-white text-white border-4 p-3 rounded-lg m-4 transition ease-in-out hover:bg-white hover:border-transparent hover:text-black"> 
                                     <a> Other Projects </a>
                                 </button>
                             </Link>
@@ -167,22 +167,22 @@ const Projects = (props) => {
 }
 
 const formatText = (string) => {
-    const header = capitalizeFirstLetter(string.split(/(?=[A-Z])/).join(' ').replace(/-/g, ' ').replace(/ +(?= )/g,''))
+    const header = capitalizeFirstLetter(string.split(/(?=[A-Z])/).join(" ").replace(/-/g, " ").replace(/ +(?= )/g,""))
 
-    let arr = header.split(' ')
+    let arr = header.split(" ")
     arr.forEach((element,index) => {
-        if (element === 'Api') {
+        if (element === "Api") {
             arr[index] = element.toUpperCase()
-        } else if (element === 'Ios'){
-            arr[index] = 'iOS'
-        } else if (element === 'Postgresql'){
-                arr[index] = 'PostgreSQL'
+        } else if (element === "Ios"){
+            arr[index] = "iOS"
+        } else if (element === "Postgresql"){
+                arr[index] = "PostgreSQL"
         } else {
             arr[index] = capitalizeFirstLetter(element)
         }
     });
 
-    return arr.join(' ')
+    return arr.join(" ")
 }
 
 const capitalizeFirstLetter = (string) => {

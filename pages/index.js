@@ -1,18 +1,18 @@
-import Head from 'next/head';
-import React, { Component } from 'react';
-import About from '../components/About';
-import Introduction from '../components/Introduction';
-import Skills from '../components/Skills';
-import Projects from '../components/Projects';
-import Contact from '../components/Contact';
-import Experience from '../components/Experience';
+import Head from "next/head";
+import React, { Component } from "react";
+import About from "../components/About";
+import Introduction from "../components/Introduction";
+import Skills from "../components/Skills";
+import Projects from "../components/Projects";
+import Contact from "../components/Contact";
+import Experience from "../components/Experience";
 import { 
     ApolloClient, 
     InMemoryCache,
     createHttpLink,
     gql
-} from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
+} from "@apollo/client";
+import { setContext } from "@apollo/client/link/context";
 
 class Home extends Component {
     constructor () {
@@ -38,12 +38,12 @@ class Home extends Component {
 
     render() {
         return (
-            <div className='app w-full min-w-full bg-black'>
+            <div className="app w-full min-w-full bg-black">
                 <Head>
                     <title>William Hughes</title>
-                    <link rel='icon' href='/favicon.ico' />
+                    <link rel="icon" href="/favicon.ico" />
                 </Head>
-                <main className='w-full min-h-screen text-white bg-black'>
+                <main className="w-full min-h-screen text-white bg-black">
                     <Introduction homeRef={this.props.myRefs.home}/>
                     <About aboutRef={this.props.myRefs.about}/>
                     <Experience experienceRef={this.props.myRefs.experience}/>
@@ -58,7 +58,7 @@ class Home extends Component {
 
 export const getStaticProps = async () => {
     const httpLink = createHttpLink({
-        uri: 'https://api.github.com/graphql',
+        uri: "https://api.github.com/graphql",
       });
       
       const authLink = setContext((_, { headers }) => {
@@ -140,13 +140,13 @@ export const getStaticProps = async () => {
 }
 
 export const setPinnedItems = (items) => {
-    sessionStorage.setItem('pinnedItems', JSON.stringify(items));
+    sessionStorage.setItem("pinnedItems", JSON.stringify(items));
 }
 
 export const getPinnedItems = () => {
     let pinnedItems
     try {
-        pinnedItems = JSON.parse(sessionStorage.getItem('pinnedItems'));
+        pinnedItems = JSON.parse(sessionStorage.getItem("pinnedItems"));
     } catch {
         pinnedItems = []
     }
